@@ -18,89 +18,150 @@ import Toybox.Math;
 import Toybox.Weather;
 [ @file = "/Users/jakobteuffel/CdA/source/CdAView.mc"; @line = 10; ]
 import Toybox.SensorHistory;
+[ @file = "/Users/jakobteuffel/CdA/source/CdAView.mc"; @line = 11; ]
+import Toybox.Time;
 [ @file = "/Users/jakobteuffel/CdA/source/CdAView.mc"; @line = 12; ]
+import Toybox.FitContributor;
+[ @file = "/Users/jakobteuffel/CdA/source/CdAView.mc"; @line = 14; ]
 class CdAView extends WatchUi.DataField{
-    [ @file = "/Users/jakobteuffel/CdA/source/CdAView.mc"; @line = 12; ]
+    [ @file = "/Users/jakobteuffel/CdA/source/CdAView.mc"; @line = 14; ]
     <init> {
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 16 17 ]
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 22 17 ]
         %tmp.1 = 287.0500676;
         %tmp.2 = as %tmp.1 Numeric;
         putv self :R_spec %tmp.2;
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 19 17 ]
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 25 17 ]
         %tmp.3 = 0.006;
         %tmp.4 = as %tmp.3 Numeric;
         putv self :roll_fric %tmp.4;
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 26 17 ]
+        %tmp.5 = 666;
+        %tmp.6 = as %tmp.5 Lang.Number;
+        putv self :BANANAS_FIELD_ID %tmp.6;
     }
-    [ @file = "/Users/jakobteuffel/CdA/source/CdAView.mc"; @line = 12; ]
+    [ @file = "/Users/jakobteuffel/CdA/source/CdAView.mc"; @line = 14; ]
     static
     <init> {
     }
-    [ @file = "/Users/jakobteuffel/CdA/source/CdAView.mc"; @line = 14; @position = 15; ]
+    [ @file = "/Users/jakobteuffel/CdA/source/CdAView.mc"; @line = 16; @position = 15; ]
     protected
-    var mValue as Numeric;
-    [ @file = "/Users/jakobteuffel/CdA/source/CdAView.mc"; @line = 15; @position = 15; ]
+    var c_dA as Numeric;
+    [ @file = "/Users/jakobteuffel/CdA/source/CdAView.mc"; @line = 17; @position = 15; ]
     protected
-    var mass as Number;
-    [ @file = "/Users/jakobteuffel/CdA/source/CdAView.mc"; @line = 16; @position = 17; ]
+    var mass as Numeric;
+    [ @file = "/Users/jakobteuffel/CdA/source/CdAView.mc"; @line = 18; @position = 15; ]
+    protected
+    var altitude_last as Numeric;
+    [ @file = "/Users/jakobteuffel/CdA/source/CdAView.mc"; @line = 19; @position = 15; ]
+    protected
+    var time_last as Time.Moment;
+    [ @file = "/Users/jakobteuffel/CdA/source/CdAView.mc"; @line = 20; @position = 15; ]
+    protected
+    var fIT_Field as FitContributor.Field;
+    [ @file = "/Users/jakobteuffel/CdA/source/CdAView.mc"; @line = 21; @position = 15; ]
+    protected
+    var vam as Numeric;
+    [ @file = "/Users/jakobteuffel/CdA/source/CdAView.mc"; @line = 22; @position = 17; ]
     protected
     const R_spec;
-    [ @file = "/Users/jakobteuffel/CdA/source/CdAView.mc"; @line = 17; @position = 17; ]
+    [ @file = "/Users/jakobteuffel/CdA/source/CdAView.mc"; @line = 23; @position = 17; ]
     protected
     const K_zero = 273.15;
-    [ @file = "/Users/jakobteuffel/CdA/source/CdAView.mc"; @line = 18; @position = 17; ]
+    [ @file = "/Users/jakobteuffel/CdA/source/CdAView.mc"; @line = 24; @position = 17; ]
     protected
     const driveTrainEffitiency = 0.97;
-    [ @file = "/Users/jakobteuffel/CdA/source/CdAView.mc"; @line = 19; @position = 17; ]
+    [ @file = "/Users/jakobteuffel/CdA/source/CdAView.mc"; @line = 25; @position = 17; ]
     protected
     const roll_fric;
-    [ @file = "/Users/jakobteuffel/CdA/source/CdAView.mc"; @line = 22; ]
+    [ @file = "/Users/jakobteuffel/CdA/source/CdAView.mc"; @line = 26; @position = 17; ]
+    protected
+    const BANANAS_FIELD_ID;
+    [ @file = "/Users/jakobteuffel/CdA/source/CdAView.mc"; @line = 29; ]
     function initialize() as Void {
-_Users_jakobteuffel_CdA_source_CdAView_mc_22_26_start:
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 23 8 ]
+_Users_jakobteuffel_CdA_source_CdAView_mc_29_26_start:
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 30 8 ]
         %tmp.2 = getv ? :DataField;
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 24 8 ]
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 31 8 ]
         %tmp.4 = 0.0f;
-        putv self :mValue %tmp.4;
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 25 8 ]
-        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_22_26_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_22_26_stop" ]
+        putv self :c_dA %tmp.4;
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 32 8 ]
+        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_29_26_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_29_26_stop" ]
         %profile.1 = local;
         %tmp.5 = getm $.Toybox.UserProfile;
         %tmp.6 = getv function %tmp.5 :getProfile;
         %tmp.7 = invoke %tmp.5 %tmp.6();
         %tmp.8 = as %tmp.7 Profile;
         lputv %profile.1 %tmp.8;
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 26 8 ]
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 33 8 ]
         %tmp.9 = lgetv %profile.1;
         %tmp.10 = getv %tmp.9 :weight;
         %tmp.11 = 1e3;
-        %tmp.12 = as %tmp.11 Number;
+        %tmp.12 = as %tmp.11 Numeric or Null;
         %tmp.13 = div %tmp.10 %tmp.12;
         putv self :mass %tmp.13;
-_Users_jakobteuffel_CdA_source_CdAView_mc_22_26_stop:
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 34 8 ]
+        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_29_26_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_29_26_stop" ]
+        %info.2 = local;
+        %tmp.14 = getm $.Toybox.Activity;
+        %tmp.15 = getv function %tmp.14 :getActivityInfo;
+        %tmp.16 = invoke %tmp.14 %tmp.15();
+        lputv %info.2 %tmp.16;
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 35 8 ]
+        %tmp.17 = lgetv %info.2;
+        %tmp.18 = getv %tmp.17 :altitude;
+        putv self :altitude_last %tmp.18;
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 36 8 ]
+        %tmp.19 = getm $.Toybox.Time;
+        %tmp.20 = getv function %tmp.19 :now;
+        %tmp.21 = invoke %tmp.19 %tmp.20();
+        putv self :time_last %tmp.21;
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 37 8 ]
+        %tmp.22 = 0;
+        putv self :vam %tmp.22;
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 38 8 ]
+        %tmp.23 = self;
+        %tmp.24 = getv function %tmp.23 :createField;
+        %tmp.25 = "CdA";
+        %tmp.27 = getv ? :BANANAS_FIELD_ID;
+        %tmp.28 = getm $.Toybox.FitContributor;
+        %tmp.29 = getv %tmp.28 :DATA_TYPE_FLOAT;
+        %tmp.30 = newd 2;
+        %tmp.32 = const :mesgType;
+        %tmp.33 = getm $.Toybox.FitContributor;
+        %tmp.34 = getv %tmp.33 :MESG_TYPE_RECORD;
+        %tmp.35 = dup %tmp.30;
+        %tmp.36 = aputv %tmp.35 %tmp.32 %tmp.34;
+        %tmp.38 = const :units;
+        %tmp.39 = "m^2";
+        %tmp.40 = dup %tmp.36;
+        %tmp.41 = aputv %tmp.40 %tmp.38 %tmp.39;
+        %tmp.42 = invoke %tmp.23 %tmp.24(%tmp.25, %tmp.27, %tmp.29, %tmp.41);
+        putv self :fIT_Field %tmp.42;
+_Users_jakobteuffel_CdA_source_CdAView_mc_29_26_stop:
     }
-    [ @file = "/Users/jakobteuffel/CdA/source/CdAView.mc"; @line = 32; ]
+    [ @file = "/Users/jakobteuffel/CdA/source/CdAView.mc"; @line = 48; ]
     function onLayout(dc as Dc) as Void {
-_Users_jakobteuffel_CdA_source_CdAView_mc_32_40_start:
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 33 8 ]
-        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_32_40_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_32_40_stop" ]
+_Users_jakobteuffel_CdA_source_CdAView_mc_48_40_start:
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 49 8 ]
+        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_48_40_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_48_40_stop" ]
         %obscurityFlags.1 = local;
         %tmp.2 = getv ? :DataField;
         %tmp.3 = getv function %tmp.2 :getObscurityFlags;
         %tmp.4 = invoke %tmp.2 %tmp.3();
         lputv %obscurityFlags.1 %tmp.4;
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 36 8 ]
-_Users_jakobteuffel_CdA_source_CdAView_mc_36_8_if_stmt:
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 52 8 ]
+_Users_jakobteuffel_CdA_source_CdAView_mc_52_8_if_stmt:
         %tmp.6 = lgetv %obscurityFlags.1;
         %tmp.8 = getv ? :OBSCURE_TOP;
         %tmp.10 = getv ? :OBSCURE_LEFT;
         %tmp.11 = bitor %tmp.8 %tmp.10;
         %tmp.12 = eq %tmp.6 %tmp.11;
-        bf %tmp.12 @_Users_jakobteuffel_CdA_source_CdAView_mc_36_8_if_false;
-_Users_jakobteuffel_CdA_source_CdAView_mc_36_8_if_true:
-_Users_jakobteuffel_CdA_source_CdAView_mc_36_60_start:
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 37 12 ]
+        bf %tmp.12 @_Users_jakobteuffel_CdA_source_CdAView_mc_52_8_if_false;
+_Users_jakobteuffel_CdA_source_CdAView_mc_52_8_if_true:
+_Users_jakobteuffel_CdA_source_CdAView_mc_52_60_start:
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 53 12 ]
         %tmp.14 = getv ? :View;
         %tmp.15 = getv function %tmp.14 :setLayout;
         %tmp.17 = getv ? :Rez;
@@ -109,20 +170,20 @@ _Users_jakobteuffel_CdA_source_CdAView_mc_36_60_start:
         %tmp.21 = lgetv %dc;
         %tmp.22 = invoke %tmp.18 %tmp.19(%tmp.21);
         invoke %tmp.14 %tmp.15(%tmp.22);
-_Users_jakobteuffel_CdA_source_CdAView_mc_36_60_stop:
-        goto @_Users_jakobteuffel_CdA_source_CdAView_mc_36_8_if_end;
-_Users_jakobteuffel_CdA_source_CdAView_mc_36_8_if_false:
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 40 15 ]
-_Users_jakobteuffel_CdA_source_CdAView_mc_40_15_if_stmt:
+_Users_jakobteuffel_CdA_source_CdAView_mc_52_60_stop:
+        goto @_Users_jakobteuffel_CdA_source_CdAView_mc_52_8_if_end;
+_Users_jakobteuffel_CdA_source_CdAView_mc_52_8_if_false:
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 56 15 ]
+_Users_jakobteuffel_CdA_source_CdAView_mc_56_15_if_stmt:
         %tmp.24 = lgetv %obscurityFlags.1;
         %tmp.26 = getv ? :OBSCURE_TOP;
         %tmp.28 = getv ? :OBSCURE_RIGHT;
         %tmp.29 = bitor %tmp.26 %tmp.28;
         %tmp.30 = eq %tmp.24 %tmp.29;
-        bf %tmp.30 @_Users_jakobteuffel_CdA_source_CdAView_mc_40_15_if_false;
-_Users_jakobteuffel_CdA_source_CdAView_mc_40_15_if_true:
-_Users_jakobteuffel_CdA_source_CdAView_mc_40_68_start:
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 41 12 ]
+        bf %tmp.30 @_Users_jakobteuffel_CdA_source_CdAView_mc_56_15_if_false;
+_Users_jakobteuffel_CdA_source_CdAView_mc_56_15_if_true:
+_Users_jakobteuffel_CdA_source_CdAView_mc_56_68_start:
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 57 12 ]
         %tmp.32 = getv ? :View;
         %tmp.33 = getv function %tmp.32 :setLayout;
         %tmp.35 = getv ? :Rez;
@@ -131,20 +192,20 @@ _Users_jakobteuffel_CdA_source_CdAView_mc_40_68_start:
         %tmp.39 = lgetv %dc;
         %tmp.40 = invoke %tmp.36 %tmp.37(%tmp.39);
         invoke %tmp.32 %tmp.33(%tmp.40);
-_Users_jakobteuffel_CdA_source_CdAView_mc_40_68_stop:
-        goto @_Users_jakobteuffel_CdA_source_CdAView_mc_40_15_if_end;
-_Users_jakobteuffel_CdA_source_CdAView_mc_40_15_if_false:
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 44 15 ]
-_Users_jakobteuffel_CdA_source_CdAView_mc_44_15_if_stmt:
+_Users_jakobteuffel_CdA_source_CdAView_mc_56_68_stop:
+        goto @_Users_jakobteuffel_CdA_source_CdAView_mc_56_15_if_end;
+_Users_jakobteuffel_CdA_source_CdAView_mc_56_15_if_false:
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 60 15 ]
+_Users_jakobteuffel_CdA_source_CdAView_mc_60_15_if_stmt:
         %tmp.42 = lgetv %obscurityFlags.1;
         %tmp.44 = getv ? :OBSCURE_BOTTOM;
         %tmp.46 = getv ? :OBSCURE_LEFT;
         %tmp.47 = bitor %tmp.44 %tmp.46;
         %tmp.48 = eq %tmp.42 %tmp.47;
-        bf %tmp.48 @_Users_jakobteuffel_CdA_source_CdAView_mc_44_15_if_false;
-_Users_jakobteuffel_CdA_source_CdAView_mc_44_15_if_true:
-_Users_jakobteuffel_CdA_source_CdAView_mc_44_70_start:
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 45 12 ]
+        bf %tmp.48 @_Users_jakobteuffel_CdA_source_CdAView_mc_60_15_if_false;
+_Users_jakobteuffel_CdA_source_CdAView_mc_60_15_if_true:
+_Users_jakobteuffel_CdA_source_CdAView_mc_60_70_start:
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 61 12 ]
         %tmp.50 = getv ? :View;
         %tmp.51 = getv function %tmp.50 :setLayout;
         %tmp.53 = getv ? :Rez;
@@ -153,20 +214,20 @@ _Users_jakobteuffel_CdA_source_CdAView_mc_44_70_start:
         %tmp.57 = lgetv %dc;
         %tmp.58 = invoke %tmp.54 %tmp.55(%tmp.57);
         invoke %tmp.50 %tmp.51(%tmp.58);
-_Users_jakobteuffel_CdA_source_CdAView_mc_44_70_stop:
-        goto @_Users_jakobteuffel_CdA_source_CdAView_mc_44_15_if_end;
-_Users_jakobteuffel_CdA_source_CdAView_mc_44_15_if_false:
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 48 15 ]
-_Users_jakobteuffel_CdA_source_CdAView_mc_48_15_if_stmt:
+_Users_jakobteuffel_CdA_source_CdAView_mc_60_70_stop:
+        goto @_Users_jakobteuffel_CdA_source_CdAView_mc_60_15_if_end;
+_Users_jakobteuffel_CdA_source_CdAView_mc_60_15_if_false:
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 64 15 ]
+_Users_jakobteuffel_CdA_source_CdAView_mc_64_15_if_stmt:
         %tmp.60 = lgetv %obscurityFlags.1;
         %tmp.62 = getv ? :OBSCURE_BOTTOM;
         %tmp.64 = getv ? :OBSCURE_RIGHT;
         %tmp.65 = bitor %tmp.62 %tmp.64;
         %tmp.66 = eq %tmp.60 %tmp.65;
-        bf %tmp.66 @_Users_jakobteuffel_CdA_source_CdAView_mc_48_15_if_false;
-_Users_jakobteuffel_CdA_source_CdAView_mc_48_15_if_true:
-_Users_jakobteuffel_CdA_source_CdAView_mc_48_71_start:
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 49 12 ]
+        bf %tmp.66 @_Users_jakobteuffel_CdA_source_CdAView_mc_64_15_if_false;
+_Users_jakobteuffel_CdA_source_CdAView_mc_64_15_if_true:
+_Users_jakobteuffel_CdA_source_CdAView_mc_64_71_start:
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 65 12 ]
         %tmp.68 = getv ? :View;
         %tmp.69 = getv function %tmp.68 :setLayout;
         %tmp.71 = getv ? :Rez;
@@ -175,11 +236,11 @@ _Users_jakobteuffel_CdA_source_CdAView_mc_48_71_start:
         %tmp.75 = lgetv %dc;
         %tmp.76 = invoke %tmp.72 %tmp.73(%tmp.75);
         invoke %tmp.68 %tmp.69(%tmp.76);
-_Users_jakobteuffel_CdA_source_CdAView_mc_48_71_stop:
-        goto @_Users_jakobteuffel_CdA_source_CdAView_mc_48_15_if_end;
-_Users_jakobteuffel_CdA_source_CdAView_mc_48_15_if_false:
-_Users_jakobteuffel_CdA_source_CdAView_mc_52_15_start:
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 53 12 ]
+_Users_jakobteuffel_CdA_source_CdAView_mc_64_71_stop:
+        goto @_Users_jakobteuffel_CdA_source_CdAView_mc_64_15_if_end;
+_Users_jakobteuffel_CdA_source_CdAView_mc_64_15_if_false:
+_Users_jakobteuffel_CdA_source_CdAView_mc_68_15_start:
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 69 12 ]
         %tmp.78 = getv ? :View;
         %tmp.79 = getv function %tmp.78 :setLayout;
         %tmp.81 = getv ? :Rez;
@@ -188,42 +249,42 @@ _Users_jakobteuffel_CdA_source_CdAView_mc_52_15_start:
         %tmp.85 = lgetv %dc;
         %tmp.86 = invoke %tmp.82 %tmp.83(%tmp.85);
         invoke %tmp.78 %tmp.79(%tmp.86);
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 54 12 ]
-        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_52_15_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_52_15_stop" ]
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 70 12 ]
+        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_68_15_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_68_15_stop" ]
         %labelView.2 = local;
         %tmp.88 = getv ? :View;
         %tmp.89 = getv function %tmp.88 :findDrawableById;
         %tmp.90 = "label";
         %tmp.91 = invoke %tmp.88 %tmp.89(%tmp.90);
         lputv %labelView.2 %tmp.91;
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 55 12 ]
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 71 12 ]
         %tmp.92 = lgetv %labelView.2;
         %tmp.93 = lgetv %labelView.2;
         %tmp.94 = getv %tmp.93 :locY;
         %tmp.95 = 16;
         %tmp.96 = sub %tmp.94 %tmp.95;
         putv %tmp.92 :locY %tmp.96;
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 56 12 ]
-        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_52_15_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_52_15_stop" ]
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 72 12 ]
+        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_68_15_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_68_15_stop" ]
         %valueView.3 = local;
         %tmp.98 = getv ? :View;
         %tmp.99 = getv function %tmp.98 :findDrawableById;
         %tmp.100 = "value";
         %tmp.101 = invoke %tmp.98 %tmp.99(%tmp.100);
         lputv %valueView.3 %tmp.101;
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 57 12 ]
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 73 12 ]
         %tmp.102 = lgetv %valueView.3;
         %tmp.103 = lgetv %valueView.3;
         %tmp.104 = getv %tmp.103 :locY;
         %tmp.105 = 7;
         %tmp.106 = add %tmp.104 %tmp.105;
         putv %tmp.102 :locY %tmp.106;
-_Users_jakobteuffel_CdA_source_CdAView_mc_52_15_stop:
-_Users_jakobteuffel_CdA_source_CdAView_mc_48_15_if_end:
-_Users_jakobteuffel_CdA_source_CdAView_mc_44_15_if_end:
-_Users_jakobteuffel_CdA_source_CdAView_mc_40_15_if_end:
-_Users_jakobteuffel_CdA_source_CdAView_mc_36_8_if_end:
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 60 8 ]
+_Users_jakobteuffel_CdA_source_CdAView_mc_68_15_stop:
+_Users_jakobteuffel_CdA_source_CdAView_mc_64_15_if_end:
+_Users_jakobteuffel_CdA_source_CdAView_mc_60_15_if_end:
+_Users_jakobteuffel_CdA_source_CdAView_mc_56_15_if_end:
+_Users_jakobteuffel_CdA_source_CdAView_mc_52_8_if_end:
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 76 8 ]
         %tmp.108 = getv ? :View;
         %tmp.109 = getv function %tmp.108 :findDrawableById;
         %tmp.110 = "label";
@@ -232,95 +293,95 @@ _Users_jakobteuffel_CdA_source_CdAView_mc_36_8_if_end:
         %tmp.113 = getv function %tmp.112 :setText;
         %tmp.114 = "CdA";
         invoke %tmp.112 %tmp.113(%tmp.114);
-_Users_jakobteuffel_CdA_source_CdAView_mc_32_40_stop:
+_Users_jakobteuffel_CdA_source_CdAView_mc_48_40_stop:
     }
-    [ @file = "/Users/jakobteuffel/CdA/source/CdAView.mc"; @line = 67; ]
+    [ @file = "/Users/jakobteuffel/CdA/source/CdAView.mc"; @line = 83; ]
     function compute(info as Activity.Info) as Void {
-_Users_jakobteuffel_CdA_source_CdAView_mc_67_52_start:
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 69 12 ]
-        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_67_52_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_67_52_stop" ]
+_Users_jakobteuffel_CdA_source_CdAView_mc_83_52_start:
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 85 12 ]
+        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_83_52_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_83_52_stop" ]
         %power.1 = local;
         %tmp.1 = lgetv %info;
         %tmp.2 = getv %tmp.1 :currentPower;
         %tmp.3 = as %tmp.2 Number;
         lputv %power.1 %tmp.3;
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 70 12 ]
-_Users_jakobteuffel_CdA_source_CdAView_mc_70_12_if_stmt:
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 86 12 ]
+_Users_jakobteuffel_CdA_source_CdAView_mc_86_12_if_stmt:
         %tmp.5 = lgetv %power.1;
         %tmp.6 = null;
         %tmp.7 = ne %tmp.5 %tmp.6;
-        bf %tmp.7 @_Users_jakobteuffel_CdA_source_CdAView_mc_70_12_if_false;
-_Users_jakobteuffel_CdA_source_CdAView_mc_70_12_if_true:
-_Users_jakobteuffel_CdA_source_CdAView_mc_70_30_start:
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 71 16 ]
+        bf %tmp.7 @_Users_jakobteuffel_CdA_source_CdAView_mc_86_12_if_false;
+_Users_jakobteuffel_CdA_source_CdAView_mc_86_12_if_true:
+_Users_jakobteuffel_CdA_source_CdAView_mc_86_30_start:
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 87 16 ]
         %tmp.8 = lgetv %power.1;
         %tmp.9 = as %tmp.8 { (!Null) };
         %tmp.11 = getv ? :driveTrainEffitiency;
         %tmp.12 = mul %tmp.9 %tmp.11;
         lputv %power.1 %tmp.12;
-_Users_jakobteuffel_CdA_source_CdAView_mc_70_30_stop:
-        goto @_Users_jakobteuffel_CdA_source_CdAView_mc_70_12_if_end;
-_Users_jakobteuffel_CdA_source_CdAView_mc_70_12_if_false:
-_Users_jakobteuffel_CdA_source_CdAView_mc_72_19_start:
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 73 16 ]
+_Users_jakobteuffel_CdA_source_CdAView_mc_86_30_stop:
+        goto @_Users_jakobteuffel_CdA_source_CdAView_mc_86_12_if_end;
+_Users_jakobteuffel_CdA_source_CdAView_mc_86_12_if_false:
+_Users_jakobteuffel_CdA_source_CdAView_mc_88_19_start:
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 89 16 ]
         %tmp.13 = 0;
         lputv %power.1 %tmp.13;
-_Users_jakobteuffel_CdA_source_CdAView_mc_72_19_stop:
-_Users_jakobteuffel_CdA_source_CdAView_mc_70_12_if_end:
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 75 12 ]
-        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_67_52_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_67_52_stop" ]
+_Users_jakobteuffel_CdA_source_CdAView_mc_88_19_stop:
+_Users_jakobteuffel_CdA_source_CdAView_mc_86_12_if_end:
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 91 12 ]
+        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_83_52_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_83_52_stop" ]
         %speed.2 = local;
         %tmp.14 = lgetv %info;
         %tmp.15 = getv %tmp.14 :currentSpeed;
-        %tmp.16 = as %tmp.15 Number;
+        %tmp.16 = as %tmp.15 Number or Null;
         lputv %speed.2 %tmp.16;
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 76 12 ]
-        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_67_52_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_67_52_stop" ]
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 92 12 ]
+        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_83_52_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_83_52_stop" ]
         %heading.3 = local;
         %tmp.17 = lgetv %info;
         %tmp.18 = getv %tmp.17 :currentHeading;
-        %tmp.19 = as %tmp.18 Number;
+        %tmp.19 = as %tmp.18 Number or Null;
         lputv %heading.3 %tmp.19;
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 77 12 ]
-        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_67_52_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_67_52_stop" ]
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 93 12 ]
+        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_83_52_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_83_52_stop" ]
         %pressure.4 = local;
         %tmp.20 = lgetv %info;
         %tmp.21 = getv %tmp.20 :ambientPressure;
-        %tmp.22 = as %tmp.21 Number;
+        %tmp.22 = as %tmp.21 Number or Null;
         lputv %pressure.4 %tmp.22;
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 78 12 ]
-        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_67_52_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_67_52_stop" ]
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 94 12 ]
+        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_83_52_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_83_52_stop" ]
         %abs_temp.5 = local;
         %tmp.23 = 300.0;
         lputv %abs_temp.5 %tmp.23;
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 79 12 ]
-        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_67_52_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_67_52_stop" ]
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 95 12 ]
+        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_83_52_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_83_52_stop" ]
         %airSpeed.6 = local;
         %tmp.25 = lgetv %speed.2;
         lputv %airSpeed.6 %tmp.25;
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 80 12 ]
-_Users_jakobteuffel_CdA_source_CdAView_mc_80_12_if_stmt:
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 96 12 ]
+_Users_jakobteuffel_CdA_source_CdAView_mc_96_12_if_stmt:
         %tmp.27 = getv ? :Toybox;
         %tmp.29 = const :Weather;
         %tmp.30 = canhazplz %tmp.27 %tmp.29;
-        bf %tmp.30 @_Users_jakobteuffel_CdA_source_CdAView_mc_80_12_if_end;
-_Users_jakobteuffel_CdA_source_CdAView_mc_80_12_if_true:
-_Users_jakobteuffel_CdA_source_CdAView_mc_80_36_start:
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 81 16 ]
-        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_80_36_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_80_36_stop" ]
+        bf %tmp.30 @_Users_jakobteuffel_CdA_source_CdAView_mc_96_12_if_end;
+_Users_jakobteuffel_CdA_source_CdAView_mc_96_12_if_true:
+_Users_jakobteuffel_CdA_source_CdAView_mc_96_36_start:
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 97 16 ]
+        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_96_36_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_96_36_stop" ]
         %wthCon.7 = local;
         %tmp.31 = getm $.Toybox.Weather;
         %tmp.32 = getv function %tmp.31 :getCurrentConditions;
         %tmp.33 = invoke %tmp.31 %tmp.32();
         %tmp.34 = as %tmp.33 Weather.CurrentConditions;
         lputv %wthCon.7 %tmp.34;
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 82 16 ]
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 98 16 ]
         %tmp.35 = lgetv %wthCon.7;
         %tmp.36 = getv %tmp.35 :temperature;
         %tmp.37 = 273.15;
         %tmp.38 = add %tmp.36 %tmp.37;
         lputv %abs_temp.5 %tmp.38;
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 83 16 ]
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 99 16 ]
         %tmp.40 = lgetv %speed.2;
         %tmp.41 = lgetv %wthCon.7;
         %tmp.42 = getv %tmp.41 :windSpeed;
@@ -339,35 +400,35 @@ _Users_jakobteuffel_CdA_source_CdAView_mc_80_36_start:
         %tmp.56 = mul %tmp.42 %tmp.55;
         %tmp.57 = add %tmp.40 %tmp.56;
         lputv %airSpeed.6 %tmp.57;
-_Users_jakobteuffel_CdA_source_CdAView_mc_80_36_stop:
-        goto @_Users_jakobteuffel_CdA_source_CdAView_mc_80_12_if_end;
-_Users_jakobteuffel_CdA_source_CdAView_mc_80_12_if_end:
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 85 12 ]
-        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_67_52_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_67_52_stop" ]
+_Users_jakobteuffel_CdA_source_CdAView_mc_96_36_stop:
+        goto @_Users_jakobteuffel_CdA_source_CdAView_mc_96_12_if_end;
+_Users_jakobteuffel_CdA_source_CdAView_mc_96_12_if_end:
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 101 12 ]
+        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_83_52_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_83_52_stop" ]
         %airDensity.8 = local;
         %tmp.58 = 1.293;
         %tmp.59 = as %tmp.58 Numeric;
         lputv %airDensity.8 %tmp.59;
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 86 12 ]
-_Users_jakobteuffel_CdA_source_CdAView_mc_86_12_if_stmt:
-_Users_jakobteuffel_CdA_source_CdAView_mc_86_16_begin:
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 102 12 ]
+_Users_jakobteuffel_CdA_source_CdAView_mc_102_12_if_stmt:
+_Users_jakobteuffel_CdA_source_CdAView_mc_102_16_begin:
         %tmp.61 = lgetv %pressure.4;
         %tmp.62 = null;
         %tmp.63 = ne %tmp.61 %tmp.62;
         %tmp.64 = dup %tmp.63;
-        bf %tmp.64 @_Users_jakobteuffel_CdA_source_CdAView_mc_86_36_end;
-_Users_jakobteuffel_CdA_source_CdAView_mc_86_36_true:
+        bf %tmp.64 @_Users_jakobteuffel_CdA_source_CdAView_mc_102_36_end;
+_Users_jakobteuffel_CdA_source_CdAView_mc_102_36_true:
         %tmp.66 = lgetv %abs_temp.5;
         %tmp.67 = null;
         %tmp.68 = ne %tmp.66 %tmp.67;
         %tmp.69 = and %tmp.63 %tmp.68;
         push %tmp.69;
-_Users_jakobteuffel_CdA_source_CdAView_mc_86_36_end:
-        %tmp.70 = phi [%tmp.64 @_Users_jakobteuffel_CdA_source_CdAView_mc_86_16_begin] [%tmp.69 @_Users_jakobteuffel_CdA_source_CdAView_mc_86_36_true] [%tmp.70 @_Users_jakobteuffel_CdA_source_CdAView_mc_86_36_end];
-        bf %tmp.70 @_Users_jakobteuffel_CdA_source_CdAView_mc_86_12_if_end;
-_Users_jakobteuffel_CdA_source_CdAView_mc_86_12_if_true:
-_Users_jakobteuffel_CdA_source_CdAView_mc_86_53_start:
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 87 16 ]
+_Users_jakobteuffel_CdA_source_CdAView_mc_102_36_end:
+        %tmp.70 = phi [%tmp.64 @_Users_jakobteuffel_CdA_source_CdAView_mc_102_16_begin] [%tmp.69 @_Users_jakobteuffel_CdA_source_CdAView_mc_102_36_true] [%tmp.70 @_Users_jakobteuffel_CdA_source_CdAView_mc_102_36_end];
+        bf %tmp.70 @_Users_jakobteuffel_CdA_source_CdAView_mc_102_12_if_end;
+_Users_jakobteuffel_CdA_source_CdAView_mc_102_12_if_true:
+_Users_jakobteuffel_CdA_source_CdAView_mc_102_53_start:
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 103 16 ]
         %tmp.72 = lgetv %pressure.4;
         %tmp.73 = as %tmp.72 { (!Null) };
         %tmp.75 = getv ? :R_spec;
@@ -376,162 +437,254 @@ _Users_jakobteuffel_CdA_source_CdAView_mc_86_53_start:
         %tmp.79 = mul %tmp.75 %tmp.78;
         %tmp.80 = div %tmp.73 %tmp.79;
         lputv %airDensity.8 %tmp.80;
-_Users_jakobteuffel_CdA_source_CdAView_mc_86_53_stop:
-        goto @_Users_jakobteuffel_CdA_source_CdAView_mc_86_12_if_end;
-_Users_jakobteuffel_CdA_source_CdAView_mc_86_12_if_end:
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 89 12 ]
-        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_67_52_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_67_52_stop" ]
+_Users_jakobteuffel_CdA_source_CdAView_mc_102_53_stop:
+        goto @_Users_jakobteuffel_CdA_source_CdAView_mc_102_12_if_end;
+_Users_jakobteuffel_CdA_source_CdAView_mc_102_12_if_end:
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 105 12 ]
+        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_83_52_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_83_52_stop" ]
         %vam.9 = local;
         %tmp.81 = self;
         %tmp.82 = getv function %tmp.81 :get_vam;
-        %tmp.83 = invoke %tmp.81 %tmp.82();
-        lputv %vam.9 %tmp.83;
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 90 12 ]
-        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_67_52_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_67_52_stop" ]
+        %tmp.83 = lgetv %info;
+        %tmp.84 = getv %tmp.83 :altitude;
+        %tmp.85 = getm $.Toybox.Time;
+        %tmp.86 = getv function %tmp.85 :now;
+        %tmp.87 = invoke %tmp.85 %tmp.86();
+        %tmp.88 = invoke %tmp.81 %tmp.82(%tmp.84, %tmp.87);
+        lputv %vam.9 %tmp.88;
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 106 12 ]
+        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_83_52_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_83_52_stop" ]
         %rollLoss.10 = local;
-        %tmp.85 = getv ? :roll_fric;
-        %tmp.86 = getm $.Toybox.Math;
-        %tmp.87 = getv function %tmp.86 :pow;
-        %tmp.89 = lgetv %speed.2;
-        %tmp.90 = 2;
-        %tmp.91 = invoke %tmp.86 %tmp.87(%tmp.89, %tmp.90);
-        %tmp.92 = mul %tmp.85 %tmp.91;
-        lputv %rollLoss.10 %tmp.92;
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 91 12 ]
-        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_67_52_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_67_52_stop" ]
+        %tmp.90 = getv ? :roll_fric;
+        %tmp.91 = getm $.Toybox.Math;
+        %tmp.92 = getv function %tmp.91 :pow;
+        %tmp.94 = lgetv %speed.2;
+        %tmp.95 = 2;
+        %tmp.96 = invoke %tmp.91 %tmp.92(%tmp.94, %tmp.95);
+        %tmp.97 = mul %tmp.90 %tmp.96;
+        lputv %rollLoss.10 %tmp.97;
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 107 12 ]
+        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_83_52_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_83_52_stop" ]
         %kinLoss.11 = local;
-        %tmp.94 = getv ? :mass;
-        %tmp.95 = 9.81;
-        %tmp.96 = mul %tmp.94 %tmp.95;
-        %tmp.98 = lgetv %vam.9;
-        %tmp.99 = mul %tmp.96 %tmp.98;
-        lputv %kinLoss.11 %tmp.99;
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 92 12 ]
-        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_67_52_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_67_52_stop" ]
+        %tmp.99 = getv ? :mass;
+        %tmp.100 = 9.81;
+        %tmp.101 = mul %tmp.99 %tmp.100;
+        %tmp.103 = lgetv %vam.9;
+        %tmp.104 = mul %tmp.101 %tmp.103;
+        lputv %kinLoss.11 %tmp.104;
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 108 12 ]
+        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_83_52_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_83_52_stop" ]
         %Ps.12 = local;
-        %tmp.101 = lgetv %power.1;
-        %tmp.103 = lgetv %rollLoss.10;
-        %tmp.104 = sub %tmp.101 %tmp.103;
-        %tmp.106 = lgetv %kinLoss.11;
-        %tmp.107 = sub %tmp.104 %tmp.106;
-        lputv %Ps.12 %tmp.107;
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 93 12 ]
-        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_67_52_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_67_52_stop" ]
+        %tmp.106 = lgetv %power.1;
+        %tmp.108 = lgetv %rollLoss.10;
+        %tmp.109 = sub %tmp.106 %tmp.108;
+        %tmp.111 = lgetv %kinLoss.11;
+        %tmp.112 = sub %tmp.109 %tmp.111;
+        lputv %Ps.12 %tmp.112;
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 109 12 ]
+        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_83_52_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_83_52_stop" ]
         %v3Rho.13 = local;
-        %tmp.108 = getm $.Toybox.Math;
-        %tmp.109 = getv function %tmp.108 :pow;
-        %tmp.111 = lgetv %airSpeed.6;
-        %tmp.112 = 3;
-        %tmp.113 = invoke %tmp.108 %tmp.109(%tmp.111, %tmp.112);
-        %tmp.115 = lgetv %airDensity.8;
-        %tmp.116 = mul %tmp.113 %tmp.115;
-        lputv %v3Rho.13 %tmp.116;
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 94 12 ]
-_Users_jakobteuffel_CdA_source_CdAView_mc_94_12_if_stmt:
-        %tmp.118 = lgetv %v3Rho.13;
-        %tmp.119 = 0;
-        %tmp.120 = gt %tmp.118 %tmp.119;
-        bf %tmp.120 @_Users_jakobteuffel_CdA_source_CdAView_mc_94_12_if_false;
-_Users_jakobteuffel_CdA_source_CdAView_mc_94_12_if_true:
-_Users_jakobteuffel_CdA_source_CdAView_mc_94_25_start:
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 95 16 ]
-        %tmp.122 = lgetv %Ps.12;
-        %tmp.124 = lgetv %v3Rho.13;
-        %tmp.125 = div %tmp.122 %tmp.124;
-        putv self :mValue %tmp.125;
-_Users_jakobteuffel_CdA_source_CdAView_mc_94_25_stop:
-        goto @_Users_jakobteuffel_CdA_source_CdAView_mc_94_12_if_end;
-_Users_jakobteuffel_CdA_source_CdAView_mc_94_12_if_false:
-_Users_jakobteuffel_CdA_source_CdAView_mc_96_18_start:
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 97 16 ]
-        %tmp.126 = 0;
-        putv self :mValue %tmp.126;
-_Users_jakobteuffel_CdA_source_CdAView_mc_96_18_stop:
-_Users_jakobteuffel_CdA_source_CdAView_mc_94_12_if_end:
-_Users_jakobteuffel_CdA_source_CdAView_mc_67_52_stop:
+        %tmp.113 = getm $.Toybox.Math;
+        %tmp.114 = getv function %tmp.113 :pow;
+        %tmp.116 = lgetv %airSpeed.6;
+        %tmp.117 = 3;
+        %tmp.118 = invoke %tmp.113 %tmp.114(%tmp.116, %tmp.117);
+        %tmp.120 = lgetv %airDensity.8;
+        %tmp.121 = mul %tmp.118 %tmp.120;
+        lputv %v3Rho.13 %tmp.121;
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 110 12 ]
+_Users_jakobteuffel_CdA_source_CdAView_mc_110_12_if_stmt:
+        %tmp.123 = lgetv %v3Rho.13;
+        %tmp.124 = 0;
+        %tmp.125 = gt %tmp.123 %tmp.124;
+        bf %tmp.125 @_Users_jakobteuffel_CdA_source_CdAView_mc_110_12_if_false;
+_Users_jakobteuffel_CdA_source_CdAView_mc_110_12_if_true:
+_Users_jakobteuffel_CdA_source_CdAView_mc_110_25_start:
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 111 16 ]
+        %tmp.127 = lgetv %Ps.12;
+        %tmp.129 = lgetv %v3Rho.13;
+        %tmp.130 = div %tmp.127 %tmp.129;
+        putv self :c_dA %tmp.130;
+_Users_jakobteuffel_CdA_source_CdAView_mc_110_25_stop:
+        goto @_Users_jakobteuffel_CdA_source_CdAView_mc_110_12_if_end;
+_Users_jakobteuffel_CdA_source_CdAView_mc_110_12_if_false:
+_Users_jakobteuffel_CdA_source_CdAView_mc_112_18_start:
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 113 16 ]
+        %tmp.131 = 0;
+        putv self :c_dA %tmp.131;
+_Users_jakobteuffel_CdA_source_CdAView_mc_112_18_stop:
+_Users_jakobteuffel_CdA_source_CdAView_mc_110_12_if_end:
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 115 12 ]
+        %tmp.133 = getv ? :fIT_Field;
+        %tmp.134 = getv function %tmp.133 :setData;
+        %tmp.136 = getv ? :c_dA;
+        invoke %tmp.133 %tmp.134(%tmp.136);
+_Users_jakobteuffel_CdA_source_CdAView_mc_83_52_stop:
     }
-    [ @file = "/Users/jakobteuffel/CdA/source/CdAView.mc"; @line = 102; ]
-    function get_vam() as Numeric {
-_Users_jakobteuffel_CdA_source_CdAView_mc_102_33_start:
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 103 8 ]
-_Users_jakobteuffel_CdA_source_CdAView_mc_103_8_if_stmt:
+    [ @file = "/Users/jakobteuffel/CdA/source/CdAView.mc"; @line = 119; ]
+    function get_vam(alt as Numeric or Null, time as Time.Moment or Null) as Numeric {
+_Users_jakobteuffel_CdA_source_CdAView_mc_119_84_start:
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 120 8 ]
+_Users_jakobteuffel_CdA_source_CdAView_mc_120_8_if_stmt:
+_Users_jakobteuffel_CdA_source_CdAView_mc_120_12_begin:
         %tmp.2 = getv ? :Toybox;
         %tmp.4 = const :SensorHistory;
         %tmp.5 = canhazplz %tmp.2 %tmp.4;
-        bf %tmp.5 @_Users_jakobteuffel_CdA_source_CdAView_mc_103_8_if_end;
-_Users_jakobteuffel_CdA_source_CdAView_mc_103_8_if_true:
-_Users_jakobteuffel_CdA_source_CdAView_mc_103_39_start:
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 104 12 ]
-_Users_jakobteuffel_CdA_source_CdAView_mc_104_12_if_stmt:
-        %tmp.7 = getv ? :Toybox;
-        %tmp.8 = as %tmp.7 { (interface { var SensorHistory; }) };
-        %tmp.9 = getv %tmp.8 :SensorHistory;
-        %tmp.11 = const :getElevationHistory;
-        %tmp.12 = canhazplz %tmp.9 %tmp.11;
-        bf %tmp.12 @_Users_jakobteuffel_CdA_source_CdAView_mc_104_12_if_end;
-_Users_jakobteuffel_CdA_source_CdAView_mc_104_12_if_true:
-_Users_jakobteuffel_CdA_source_CdAView_mc_104_62_start:
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 105 16 ]
-        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_104_62_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_104_62_stop" ]
+        %tmp.6 = dup %tmp.5;
+        bf %tmp.6 @_Users_jakobteuffel_CdA_source_CdAView_mc_120_44_end;
+_Users_jakobteuffel_CdA_source_CdAView_mc_120_44_true:
+        %tmp.8 = getv ? :Toybox;
+        %tmp.9 = as %tmp.8 { (interface { var SensorHistory; }) };
+        %tmp.10 = getv %tmp.9 :SensorHistory;
+        %tmp.12 = const :getElevationHistory;
+        %tmp.13 = canhazplz %tmp.10 %tmp.12;
+        %tmp.14 = and %tmp.5 %tmp.13;
+        push %tmp.14;
+_Users_jakobteuffel_CdA_source_CdAView_mc_120_44_end:
+        %tmp.15 = phi [%tmp.6 @_Users_jakobteuffel_CdA_source_CdAView_mc_120_12_begin] [%tmp.14 @_Users_jakobteuffel_CdA_source_CdAView_mc_120_44_true] [%tmp.15 @_Users_jakobteuffel_CdA_source_CdAView_mc_120_44_end];
+        bf %tmp.15 @_Users_jakobteuffel_CdA_source_CdAView_mc_120_8_if_false;
+_Users_jakobteuffel_CdA_source_CdAView_mc_120_8_if_true:
+_Users_jakobteuffel_CdA_source_CdAView_mc_120_93_start:
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 121 12 ]
+        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_120_93_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_120_93_stop" ]
         %altIt.1 = local;
-        %tmp.13 = getm $.Toybox.SensorHistory;
-        %tmp.14 = getv function %tmp.13 :getElevationHistory;
-        %tmp.15 = newd 1;
-        %tmp.17 = const :period;
-        %tmp.18 = 2;
-        %tmp.19 = as %tmp.18 Lang.Number;
-        %tmp.20 = dup %tmp.15;
-        %tmp.21 = aputv %tmp.20 %tmp.17 %tmp.19;
-        %tmp.22 = invoke %tmp.13 %tmp.14(%tmp.21);
-        lputv %altIt.1 %tmp.22;
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 106 16 ]
-        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_104_62_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_104_62_stop" ]
+        %tmp.16 = getm $.Toybox.SensorHistory;
+        %tmp.17 = getv function %tmp.16 :getElevationHistory;
+        %tmp.18 = newd 1;
+        %tmp.20 = const :period;
+        %tmp.21 = 2;
+        %tmp.22 = as %tmp.21 Lang.Number;
+        %tmp.23 = dup %tmp.18;
+        %tmp.24 = aputv %tmp.23 %tmp.20 %tmp.22;
+        %tmp.25 = invoke %tmp.16 %tmp.17(%tmp.24);
+        lputv %altIt.1 %tmp.25;
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 122 12 ]
+        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_120_93_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_120_93_stop" ]
         %start.2 = local;
-        %tmp.23 = lgetv %altIt.1;
-        %tmp.24 = getv function %tmp.23 :next;
-        %tmp.25 = invoke %tmp.23 %tmp.24();
-        %tmp.26 = getv %tmp.25 :data;
-        lputv %start.2 %tmp.26;
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 107 16 ]
-        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_104_62_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_104_62_stop" ]
+        %tmp.26 = lgetv %altIt.1;
+        %tmp.27 = getv function %tmp.26 :next;
+        %tmp.28 = invoke %tmp.26 %tmp.27();
+        %tmp.29 = getv %tmp.28 :data;
+        lputv %start.2 %tmp.29;
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 123 12 ]
+        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_120_93_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_120_93_stop" ]
         %end.3 = local;
-        %tmp.27 = lgetv %altIt.1;
-        %tmp.28 = getv function %tmp.27 :next;
-        %tmp.29 = invoke %tmp.27 %tmp.28();
-        %tmp.30 = getv %tmp.29 :data;
-        lputv %end.3 %tmp.30;
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 108 16 ]
-        %tmp.32 = lgetv %end.3;
-        %tmp.33 = 1;
-        %tmp.34 = agetv %tmp.32 %tmp.33;
-        %tmp.36 = lgetv %start.2;
-        %tmp.37 = 1;
-        %tmp.38 = agetv %tmp.36 %tmp.37;
-        %tmp.39 = sub %tmp.34 %tmp.38;
-        %tmp.41 = lgetv %end.3;
-        %tmp.42 = 0;
-        %tmp.43 = agetv %tmp.41 %tmp.42;
-        %tmp.45 = lgetv %start.2;
-        %tmp.46 = 0;
-        %tmp.47 = agetv %tmp.45 %tmp.46;
-        %tmp.48 = sub %tmp.43 %tmp.47;
-        %tmp.49 = div %tmp.39 %tmp.48;
-        ret %tmp.49;
-_Users_jakobteuffel_CdA_source_CdAView_mc_104_62_stop:
-        goto @_Users_jakobteuffel_CdA_source_CdAView_mc_104_12_if_end;
-_Users_jakobteuffel_CdA_source_CdAView_mc_104_12_if_end:
-_Users_jakobteuffel_CdA_source_CdAView_mc_103_39_stop:
-        goto @_Users_jakobteuffel_CdA_source_CdAView_mc_103_8_if_end;
-_Users_jakobteuffel_CdA_source_CdAView_mc_103_8_if_end:
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 111 8 ]
-        %tmp.50 = 0;
-        ret %tmp.50;
-_Users_jakobteuffel_CdA_source_CdAView_mc_102_33_stop:
+        %tmp.30 = lgetv %altIt.1;
+        %tmp.31 = getv function %tmp.30 :next;
+        %tmp.32 = invoke %tmp.30 %tmp.31();
+        %tmp.33 = getv %tmp.32 :data;
+        lputv %end.3 %tmp.33;
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 124 12 ]
+        %tmp.35 = lgetv %end.3;
+        %tmp.36 = 1;
+        %tmp.37 = agetv %tmp.35 %tmp.36;
+        %tmp.39 = lgetv %start.2;
+        %tmp.40 = 1;
+        %tmp.41 = agetv %tmp.39 %tmp.40;
+        %tmp.42 = sub %tmp.37 %tmp.41;
+        %tmp.44 = lgetv %end.3;
+        %tmp.45 = 0;
+        %tmp.46 = agetv %tmp.44 %tmp.45;
+        %tmp.48 = lgetv %start.2;
+        %tmp.49 = 0;
+        %tmp.50 = agetv %tmp.48 %tmp.49;
+        %tmp.51 = sub %tmp.46 %tmp.50;
+        %tmp.52 = div %tmp.42 %tmp.51;
+        ret %tmp.52;
+_Users_jakobteuffel_CdA_source_CdAView_mc_120_93_stop:
+        goto @_Users_jakobteuffel_CdA_source_CdAView_mc_120_8_if_end;
+_Users_jakobteuffel_CdA_source_CdAView_mc_120_8_if_false:
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 125 15 ]
+_Users_jakobteuffel_CdA_source_CdAView_mc_125_15_if_stmt:
+_Users_jakobteuffel_CdA_source_CdAView_mc_125_19_begin:
+        %tmp.54 = lgetv %alt;
+        %tmp.55 = null;
+        %tmp.56 = ne %tmp.54 %tmp.55;
+        %tmp.57 = dup %tmp.56;
+        bf %tmp.57 @_Users_jakobteuffel_CdA_source_CdAView_mc_125_37_end;
+_Users_jakobteuffel_CdA_source_CdAView_mc_125_37_true:
+        %tmp.59 = lgetv %time;
+        %tmp.60 = null;
+        %tmp.61 = ne %tmp.59 %tmp.60;
+        %tmp.62 = and %tmp.56 %tmp.61;
+        push %tmp.62;
+_Users_jakobteuffel_CdA_source_CdAView_mc_125_37_end:
+        %tmp.63 = phi [%tmp.57 @_Users_jakobteuffel_CdA_source_CdAView_mc_125_19_begin] [%tmp.62 @_Users_jakobteuffel_CdA_source_CdAView_mc_125_37_true] [%tmp.63 @_Users_jakobteuffel_CdA_source_CdAView_mc_125_37_end];
+        bf %tmp.63 @_Users_jakobteuffel_CdA_source_CdAView_mc_125_15_if_end;
+_Users_jakobteuffel_CdA_source_CdAView_mc_125_15_if_true:
+_Users_jakobteuffel_CdA_source_CdAView_mc_125_52_start:
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 126 12 ]
+        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_125_52_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_125_52_stop" ]
+        %alt_gain.4 = local;
+        %tmp.65 = lgetv %alt;
+        %tmp.66 = as %tmp.65 { (!Null) };
+        %tmp.68 = getv ? :altitude_last;
+        %tmp.69 = sub %tmp.66 %tmp.68;
+        lputv %alt_gain.4 %tmp.69;
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 127 12 ]
+        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_125_52_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_125_52_stop" ]
+        %duration.5 = local;
+        %tmp.71 = getv ? :time_last;
+        %tmp.72 = getv function %tmp.71 :subtract;
+        %tmp.74 = lgetv %time;
+        %tmp.75 = as %tmp.74 { (!Null) };
+        %tmp.76 = invoke %tmp.71 %tmp.72(%tmp.75);
+        %tmp.77 = as %tmp.76 Time.Duration;
+        %tmp.78 = getv function %tmp.77 :value;
+        %tmp.79 = invoke %tmp.77 %tmp.78();
+        lputv %duration.5 %tmp.79;
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 128 12 ]
+_Users_jakobteuffel_CdA_source_CdAView_mc_128_12_if_stmt:
+        %tmp.81 = lgetv %duration.5;
+        %tmp.82 = 0;
+        %tmp.83 = gt %tmp.81 %tmp.82;
+        bf %tmp.83 @_Users_jakobteuffel_CdA_source_CdAView_mc_128_12_if_end;
+_Users_jakobteuffel_CdA_source_CdAView_mc_128_12_if_true:
+_Users_jakobteuffel_CdA_source_CdAView_mc_128_29_start:
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 129 16 ]
+        %tmp.85 = lgetv %alt_gain.4;
+        %tmp.87 = lgetv %duration.5;
+        %tmp.88 = div %tmp.85 %tmp.87;
+        putv self :vam %tmp.88;
+_Users_jakobteuffel_CdA_source_CdAView_mc_128_29_stop:
+        goto @_Users_jakobteuffel_CdA_source_CdAView_mc_128_12_if_end;
+_Users_jakobteuffel_CdA_source_CdAView_mc_128_12_if_end:
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 131 12 ]
+_Users_jakobteuffel_CdA_source_CdAView_mc_131_12_if_stmt:
+        %tmp.90 = lgetv %alt;
+        %tmp.91 = as %tmp.90 { (!Null) };
+        %tmp.93 = getv ? :altitude_last;
+        %tmp.94 = ne %tmp.91 %tmp.93;
+        bf %tmp.94 @_Users_jakobteuffel_CdA_source_CdAView_mc_131_12_if_end;
+_Users_jakobteuffel_CdA_source_CdAView_mc_131_12_if_true:
+_Users_jakobteuffel_CdA_source_CdAView_mc_131_37_start:
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 132 16 ]
+        %tmp.96 = lgetv %time;
+        %tmp.97 = as %tmp.96 { (!Null) };
+        putv self :time_last %tmp.97;
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 133 16 ]
+        %tmp.99 = lgetv %alt;
+        %tmp.100 = as %tmp.99 { (!Null) };
+        putv self :altitude_last %tmp.100;
+_Users_jakobteuffel_CdA_source_CdAView_mc_131_37_stop:
+        goto @_Users_jakobteuffel_CdA_source_CdAView_mc_131_12_if_end;
+_Users_jakobteuffel_CdA_source_CdAView_mc_131_12_if_end:
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 135 12 ]
+        %tmp.102 = getv ? :vam;
+        ret %tmp.102;
+_Users_jakobteuffel_CdA_source_CdAView_mc_125_52_stop:
+        goto @_Users_jakobteuffel_CdA_source_CdAView_mc_125_15_if_end;
+_Users_jakobteuffel_CdA_source_CdAView_mc_125_15_if_end:
+_Users_jakobteuffel_CdA_source_CdAView_mc_120_8_if_end:
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 137 8 ]
+        %tmp.103 = 0;
+        ret %tmp.103;
+_Users_jakobteuffel_CdA_source_CdAView_mc_119_84_stop:
     }
-    [ @file = "/Users/jakobteuffel/CdA/source/CdAView.mc"; @line = 117; ]
+    [ @file = "/Users/jakobteuffel/CdA/source/CdAView.mc"; @line = 143; ]
     function onUpdate(dc as Dc) as Void {
-_Users_jakobteuffel_CdA_source_CdAView_mc_117_40_start:
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 119 8 ]
+_Users_jakobteuffel_CdA_source_CdAView_mc_143_40_start:
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 145 8 ]
         %tmp.2 = getv ? :View;
         %tmp.3 = getv function %tmp.2 :findDrawableById;
         %tmp.4 = "Background";
@@ -542,8 +695,8 @@ _Users_jakobteuffel_CdA_source_CdAView_mc_117_40_start:
         %tmp.9 = getv function %tmp.8 :getBackgroundColor;
         %tmp.10 = invoke %tmp.8 %tmp.9();
         invoke %tmp.6 %tmp.7(%tmp.10);
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 122 8 ]
-        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_117_40_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_117_40_stop" ]
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 148 8 ]
+        [ "_Users_jakobteuffel_CdA_source_CdAView_mc_143_40_start" "_Users_jakobteuffel_CdA_source_CdAView_mc_143_40_stop" ]
         %value.1 = local;
         %tmp.12 = getv ? :View;
         %tmp.13 = getv function %tmp.12 :findDrawableById;
@@ -551,51 +704,51 @@ _Users_jakobteuffel_CdA_source_CdAView_mc_117_40_start:
         %tmp.15 = invoke %tmp.12 %tmp.13(%tmp.14);
         %tmp.16 = as %tmp.15 Text;
         lputv %value.1 %tmp.16;
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 123 8 ]
-_Users_jakobteuffel_CdA_source_CdAView_mc_123_8_if_stmt:
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 149 8 ]
+_Users_jakobteuffel_CdA_source_CdAView_mc_149_8_if_stmt:
         %tmp.17 = self;
         %tmp.18 = getv function %tmp.17 :getBackgroundColor;
         %tmp.19 = invoke %tmp.17 %tmp.18();
         %tmp.20 = getm $.Toybox.Graphics;
         %tmp.21 = getv %tmp.20 :COLOR_BLACK;
         %tmp.22 = eq %tmp.19 %tmp.21;
-        bf %tmp.22 @_Users_jakobteuffel_CdA_source_CdAView_mc_123_8_if_false;
-_Users_jakobteuffel_CdA_source_CdAView_mc_123_8_if_true:
-_Users_jakobteuffel_CdA_source_CdAView_mc_123_58_start:
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 124 12 ]
+        bf %tmp.22 @_Users_jakobteuffel_CdA_source_CdAView_mc_149_8_if_false;
+_Users_jakobteuffel_CdA_source_CdAView_mc_149_8_if_true:
+_Users_jakobteuffel_CdA_source_CdAView_mc_149_58_start:
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 150 12 ]
         %tmp.23 = lgetv %value.1;
         %tmp.24 = getv function %tmp.23 :setColor;
         %tmp.25 = getm $.Toybox.Graphics;
         %tmp.26 = getv %tmp.25 :COLOR_WHITE;
         invoke %tmp.23 %tmp.24(%tmp.26);
-_Users_jakobteuffel_CdA_source_CdAView_mc_123_58_stop:
-        goto @_Users_jakobteuffel_CdA_source_CdAView_mc_123_8_if_end;
-_Users_jakobteuffel_CdA_source_CdAView_mc_123_8_if_false:
-_Users_jakobteuffel_CdA_source_CdAView_mc_125_15_start:
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 126 12 ]
+_Users_jakobteuffel_CdA_source_CdAView_mc_149_58_stop:
+        goto @_Users_jakobteuffel_CdA_source_CdAView_mc_149_8_if_end;
+_Users_jakobteuffel_CdA_source_CdAView_mc_149_8_if_false:
+_Users_jakobteuffel_CdA_source_CdAView_mc_151_15_start:
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 152 12 ]
         %tmp.27 = lgetv %value.1;
         %tmp.28 = getv function %tmp.27 :setColor;
         %tmp.29 = getm $.Toybox.Graphics;
         %tmp.30 = getv %tmp.29 :COLOR_BLACK;
         invoke %tmp.27 %tmp.28(%tmp.30);
-_Users_jakobteuffel_CdA_source_CdAView_mc_125_15_stop:
-_Users_jakobteuffel_CdA_source_CdAView_mc_123_8_if_end:
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 129 8 ]
+_Users_jakobteuffel_CdA_source_CdAView_mc_151_15_stop:
+_Users_jakobteuffel_CdA_source_CdAView_mc_149_8_if_end:
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 155 8 ]
         %tmp.31 = lgetv %value.1;
         %tmp.32 = getv function %tmp.31 :setText;
         %tmp.33 = "CdA\n";
-        %tmp.35 = getv ? :mValue;
+        %tmp.35 = getv ? :c_dA;
         %tmp.36 = getv function %tmp.35 :format;
-        %tmp.37 = "%+.4f";
+        %tmp.37 = "%.4f";
         %tmp.38 = invoke %tmp.35 %tmp.36(%tmp.37);
         %tmp.39 = add %tmp.33 %tmp.38;
         invoke %tmp.31 %tmp.32(%tmp.39);
-[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 132 8 ]
+[ "/Users/jakobteuffel/CdA/source/CdAView.mc" 158 8 ]
         %tmp.41 = getv ? :View;
         %tmp.42 = getv function %tmp.41 :onUpdate;
         %tmp.44 = lgetv %dc;
         invoke %tmp.41 %tmp.42(%tmp.44);
-_Users_jakobteuffel_CdA_source_CdAView_mc_117_40_stop:
+_Users_jakobteuffel_CdA_source_CdAView_mc_143_40_stop:
     }
 }
 [ @file = "/Users/jakobteuffel/CdA/source/CdAView.mc"; @line = 1; ]

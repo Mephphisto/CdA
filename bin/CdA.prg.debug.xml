@@ -22,114 +22,130 @@
 <entry filename="/Users/jakobteuffel/CdA/source/CdAApp.mc" id="9" lineNum="8" parent="globals/CdAApp" pc="268435684" symbol="initialize"/>
 <entry filename="/Users/jakobteuffel/CdA/source/CdAApp.mc" id="10" lineNum="16" parent="globals/CdAApp" pc="268435703" symbol="onStop"/>
 <entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="11" lineNum="7" parent="globals/Rez" pc="268435706" symbol="&lt;init&gt;"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="12" lineNum="12" parent="globals/CdAView" pc="268435725" symbol="&lt;init&gt;"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="13" lineNum="67" parent="globals/CdAView" pc="268435744" symbol="compute"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="13" lineNum="69" parent="globals/CdAView" pc="268435748" symbol="compute"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="13" lineNum="70" parent="globals/CdAView" pc="268435758" symbol="compute"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="13" lineNum="71" parent="globals/CdAView" pc="268435765" symbol="compute"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="13" lineNum="73" parent="globals/CdAView" pc="268435778" symbol="compute"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="13" lineNum="75" parent="globals/CdAView" pc="268435785" symbol="compute"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="13" lineNum="76" parent="globals/CdAView" pc="268435795" symbol="compute"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="13" lineNum="77" parent="globals/CdAView" pc="268435805" symbol="compute"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="13" lineNum="78" parent="globals/CdAView" pc="268435815" symbol="compute"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="13" lineNum="79" parent="globals/CdAView" pc="268435822" symbol="compute"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="13" lineNum="80" parent="globals/CdAView" pc="268435826" symbol="compute"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="13" lineNum="81" parent="globals/CdAView" pc="268435831" symbol="compute"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="13" lineNum="82" parent="globals/CdAView" pc="268435848" symbol="compute"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="13" lineNum="83" parent="globals/CdAView" pc="268435864" symbol="compute"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="13" lineNum="85" parent="globals/CdAView" pc="268435919" symbol="compute"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="13" lineNum="86" parent="globals/CdAView" pc="268435926" symbol="compute"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="13" lineNum="87" parent="globals/CdAView" pc="268435943" symbol="compute"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="13" lineNum="89" parent="globals/CdAView" pc="268435959" symbol="compute"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="13" lineNum="90" parent="globals/CdAView" pc="268435972" symbol="compute"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="13" lineNum="91" parent="globals/CdAView" pc="268436002" symbol="compute"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="13" lineNum="92" parent="globals/CdAView" pc="268436021" symbol="compute"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="13" lineNum="93" parent="globals/CdAView" pc="268436031" symbol="compute"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="13" lineNum="94" parent="globals/CdAView" pc="268436058" symbol="compute"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="13" lineNum="95" parent="globals/CdAView" pc="268436069" symbol="compute"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="13" lineNum="97" parent="globals/CdAView" pc="268436085" symbol="compute"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="14" lineNum="102" parent="globals/CdAView" pc="268436099" symbol="get_vam"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="14" lineNum="103" parent="globals/CdAView" pc="268436103" symbol="get_vam"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="14" lineNum="104" parent="globals/CdAView" pc="268436124" symbol="get_vam"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="14" lineNum="105" parent="globals/CdAView" pc="268436151" symbol="get_vam"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="14" lineNum="106" parent="globals/CdAView" pc="268436187" symbol="get_vam"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="14" lineNum="107" parent="globals/CdAView" pc="268436206" symbol="get_vam"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="14" lineNum="108" parent="globals/CdAView" pc="268436225" symbol="get_vam"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="14" lineNum="111" parent="globals/CdAView" pc="268436267" symbol="get_vam"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="15" lineNum="32" parent="globals/CdAView" pc="268436273" symbol="onLayout"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="15" lineNum="33" parent="globals/CdAView" pc="268436277" symbol="onLayout"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="15" lineNum="36" parent="globals/CdAView" pc="268436296" symbol="onLayout"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="15" lineNum="37" parent="globals/CdAView" pc="268436307" symbol="onLayout"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="15" lineNum="40" parent="globals/CdAView" pc="268436361" symbol="onLayout"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="15" lineNum="41" parent="globals/CdAView" pc="268436372" symbol="onLayout"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="15" lineNum="44" parent="globals/CdAView" pc="268436426" symbol="onLayout"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="15" lineNum="45" parent="globals/CdAView" pc="268436437" symbol="onLayout"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="15" lineNum="48" parent="globals/CdAView" pc="268436491" symbol="onLayout"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="15" lineNum="49" parent="globals/CdAView" pc="268436502" symbol="onLayout"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="15" lineNum="53" parent="globals/CdAView" pc="268436556" symbol="onLayout"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="15" lineNum="54" parent="globals/CdAView" pc="268436607" symbol="onLayout"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="15" lineNum="55" parent="globals/CdAView" pc="268436635" symbol="onLayout"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="15" lineNum="56" parent="globals/CdAView" pc="268436657" symbol="onLayout"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="15" lineNum="57" parent="globals/CdAView" pc="268436685" symbol="onLayout"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="15" lineNum="60" parent="globals/CdAView" pc="268436707" symbol="onLayout"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="16" lineNum="22" parent="globals/CdAView" pc="268436749" symbol="initialize"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="16" lineNum="23" parent="globals/CdAView" pc="268436753" symbol="initialize"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="16" lineNum="24" parent="globals/CdAView" pc="268436771" symbol="initialize"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="16" lineNum="25" parent="globals/CdAView" pc="268436784" symbol="initialize"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="16" lineNum="26" parent="globals/CdAView" pc="268436801" symbol="initialize"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="17" lineNum="117" parent="globals/CdAView" pc="268436824" symbol="onUpdate"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="17" lineNum="119" parent="globals/CdAView" pc="268436828" symbol="onUpdate"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="17" lineNum="122" parent="globals/CdAView" pc="268436875" symbol="onUpdate"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="17" lineNum="123" parent="globals/CdAView" pc="268436903" symbol="onUpdate"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="17" lineNum="124" parent="globals/CdAView" pc="268436923" symbol="onUpdate"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="17" lineNum="126" parent="globals/CdAView" pc="268436943" symbol="onUpdate"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="17" lineNum="129" parent="globals/CdAView" pc="268436960" symbol="onUpdate"/>
-<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="17" lineNum="132" parent="globals/CdAView" pc="268437000" symbol="onUpdate"/>
-<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="18" lineNum="63" parent="globals/Rez/Layouts" pc="268437025" symbol="BottomRightLayout"/>
-<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="18" lineNum="64" parent="globals/Rez/Layouts" pc="268437037" symbol="BottomRightLayout"/>
-<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="18" lineNum="66" parent="globals/Rez/Layouts" pc="268437065" symbol="BottomRightLayout"/>
-<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="18" lineNum="68" parent="globals/Rez/Layouts" pc="268437177" symbol="BottomRightLayout"/>
-<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="18" lineNum="70" parent="globals/Rez/Layouts" pc="268437289" symbol="BottomRightLayout"/>
-<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="19" lineNum="43" parent="globals/Rez/Layouts" pc="268437326" symbol="TopRightLayout"/>
-<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="19" lineNum="44" parent="globals/Rez/Layouts" pc="268437338" symbol="TopRightLayout"/>
-<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="19" lineNum="46" parent="globals/Rez/Layouts" pc="268437366" symbol="TopRightLayout"/>
-<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="19" lineNum="48" parent="globals/Rez/Layouts" pc="268437478" symbol="TopRightLayout"/>
-<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="19" lineNum="50" parent="globals/Rez/Layouts" pc="268437590" symbol="TopRightLayout"/>
-<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="20" lineNum="53" parent="globals/Rez/Layouts" pc="268437627" symbol="BottomLeftLayout"/>
-<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="20" lineNum="54" parent="globals/Rez/Layouts" pc="268437639" symbol="BottomLeftLayout"/>
-<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="20" lineNum="56" parent="globals/Rez/Layouts" pc="268437667" symbol="BottomLeftLayout"/>
-<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="20" lineNum="58" parent="globals/Rez/Layouts" pc="268437779" symbol="BottomLeftLayout"/>
-<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="20" lineNum="60" parent="globals/Rez/Layouts" pc="268437891" symbol="BottomLeftLayout"/>
-<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="21" lineNum="33" parent="globals/Rez/Layouts" pc="268437928" symbol="TopLeftLayout"/>
-<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="21" lineNum="34" parent="globals/Rez/Layouts" pc="268437940" symbol="TopLeftLayout"/>
-<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="21" lineNum="36" parent="globals/Rez/Layouts" pc="268437968" symbol="TopLeftLayout"/>
-<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="21" lineNum="38" parent="globals/Rez/Layouts" pc="268438080" symbol="TopLeftLayout"/>
-<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="21" lineNum="40" parent="globals/Rez/Layouts" pc="268438192" symbol="TopLeftLayout"/>
-<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="22" lineNum="19" parent="globals/Rez/Layouts" pc="268438229" symbol="MainLayout"/>
-<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="22" lineNum="20" parent="globals/Rez/Layouts" pc="268438241" symbol="MainLayout"/>
-<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="22" lineNum="22" parent="globals/Rez/Layouts" pc="268438254" symbol="MainLayout"/>
-<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="22" lineNum="24" parent="globals/Rez/Layouts" pc="268438267" symbol="MainLayout"/>
-<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="22" lineNum="26" parent="globals/Rez/Layouts" pc="268438295" symbol="MainLayout"/>
-<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="22" lineNum="28" parent="globals/Rez/Layouts" pc="268438430" symbol="MainLayout"/>
-<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="22" lineNum="30" parent="globals/Rez/Layouts" pc="268438565" symbol="MainLayout"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="12" lineNum="14" parent="globals/CdAView" pc="268435725" symbol="&lt;init&gt;"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="13" lineNum="48" parent="globals/CdAView" pc="268435744" symbol="onLayout"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="13" lineNum="49" parent="globals/CdAView" pc="268435748" symbol="onLayout"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="13" lineNum="52" parent="globals/CdAView" pc="268435767" symbol="onLayout"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="13" lineNum="53" parent="globals/CdAView" pc="268435778" symbol="onLayout"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="13" lineNum="56" parent="globals/CdAView" pc="268435832" symbol="onLayout"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="13" lineNum="57" parent="globals/CdAView" pc="268435843" symbol="onLayout"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="13" lineNum="60" parent="globals/CdAView" pc="268435897" symbol="onLayout"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="13" lineNum="61" parent="globals/CdAView" pc="268435908" symbol="onLayout"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="13" lineNum="64" parent="globals/CdAView" pc="268435962" symbol="onLayout"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="13" lineNum="65" parent="globals/CdAView" pc="268435973" symbol="onLayout"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="13" lineNum="69" parent="globals/CdAView" pc="268436027" symbol="onLayout"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="13" lineNum="70" parent="globals/CdAView" pc="268436078" symbol="onLayout"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="13" lineNum="71" parent="globals/CdAView" pc="268436106" symbol="onLayout"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="13" lineNum="72" parent="globals/CdAView" pc="268436128" symbol="onLayout"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="13" lineNum="73" parent="globals/CdAView" pc="268436156" symbol="onLayout"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="13" lineNum="76" parent="globals/CdAView" pc="268436178" symbol="onLayout"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="14" lineNum="83" parent="globals/CdAView" pc="268436220" symbol="compute"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="14" lineNum="85" parent="globals/CdAView" pc="268436224" symbol="compute"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="14" lineNum="86" parent="globals/CdAView" pc="268436234" symbol="compute"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="14" lineNum="87" parent="globals/CdAView" pc="268436241" symbol="compute"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="14" lineNum="89" parent="globals/CdAView" pc="268436254" symbol="compute"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="14" lineNum="91" parent="globals/CdAView" pc="268436261" symbol="compute"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="14" lineNum="92" parent="globals/CdAView" pc="268436271" symbol="compute"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="14" lineNum="93" parent="globals/CdAView" pc="268436281" symbol="compute"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="14" lineNum="94" parent="globals/CdAView" pc="268436291" symbol="compute"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="14" lineNum="95" parent="globals/CdAView" pc="268436298" symbol="compute"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="14" lineNum="96" parent="globals/CdAView" pc="268436302" symbol="compute"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="14" lineNum="97" parent="globals/CdAView" pc="268436307" symbol="compute"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="14" lineNum="98" parent="globals/CdAView" pc="268436324" symbol="compute"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="14" lineNum="99" parent="globals/CdAView" pc="268436340" symbol="compute"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="14" lineNum="101" parent="globals/CdAView" pc="268436395" symbol="compute"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="14" lineNum="102" parent="globals/CdAView" pc="268436402" symbol="compute"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="14" lineNum="103" parent="globals/CdAView" pc="268436419" symbol="compute"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="14" lineNum="105" parent="globals/CdAView" pc="268436435" symbol="compute"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="14" lineNum="106" parent="globals/CdAView" pc="268436471" symbol="compute"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="14" lineNum="107" parent="globals/CdAView" pc="268436501" symbol="compute"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="14" lineNum="108" parent="globals/CdAView" pc="268436520" symbol="compute"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="14" lineNum="109" parent="globals/CdAView" pc="268436530" symbol="compute"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="14" lineNum="110" parent="globals/CdAView" pc="268436557" symbol="compute"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="14" lineNum="111" parent="globals/CdAView" pc="268436568" symbol="compute"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="14" lineNum="113" parent="globals/CdAView" pc="268436584" symbol="compute"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="14" lineNum="115" parent="globals/CdAView" pc="268436597" symbol="compute"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="15" lineNum="119" parent="globals/CdAView" pc="268436624" symbol="get_vam"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="15" lineNum="120" parent="globals/CdAView" pc="268436628" symbol="get_vam"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="15" lineNum="121" parent="globals/CdAView" pc="268436679" symbol="get_vam"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="15" lineNum="122" parent="globals/CdAView" pc="268436715" symbol="get_vam"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="15" lineNum="123" parent="globals/CdAView" pc="268436734" symbol="get_vam"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="15" lineNum="124" parent="globals/CdAView" pc="268436753" symbol="get_vam"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="15" lineNum="125" parent="globals/CdAView" pc="268436792" symbol="get_vam"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="15" lineNum="126" parent="globals/CdAView" pc="268436809" symbol="get_vam"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="15" lineNum="127" parent="globals/CdAView" pc="268436822" symbol="get_vam"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="15" lineNum="128" parent="globals/CdAView" pc="268436852" symbol="get_vam"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="15" lineNum="129" parent="globals/CdAView" pc="268436863" symbol="get_vam"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="15" lineNum="131" parent="globals/CdAView" pc="268436879" symbol="get_vam"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="15" lineNum="132" parent="globals/CdAView" pc="268436893" symbol="get_vam"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="15" lineNum="133" parent="globals/CdAView" pc="268436903" symbol="get_vam"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="15" lineNum="135" parent="globals/CdAView" pc="268436916" symbol="get_vam"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="15" lineNum="137" parent="globals/CdAView" pc="268436928" symbol="get_vam"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="16" lineNum="29" parent="globals/CdAView" pc="268436934" symbol="initialize"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="16" lineNum="30" parent="globals/CdAView" pc="268436938" symbol="initialize"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="16" lineNum="31" parent="globals/CdAView" pc="268436956" symbol="initialize"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="16" lineNum="32" parent="globals/CdAView" pc="268436969" symbol="initialize"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="16" lineNum="33" parent="globals/CdAView" pc="268436986" symbol="initialize"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="16" lineNum="34" parent="globals/CdAView" pc="268437008" symbol="initialize"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="16" lineNum="35" parent="globals/CdAView" pc="268437025" symbol="initialize"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="16" lineNum="36" parent="globals/CdAView" pc="268437041" symbol="initialize"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="16" lineNum="37" parent="globals/CdAView" pc="268437064" symbol="initialize"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="16" lineNum="38" parent="globals/CdAView" pc="268437077" symbol="initialize"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="17" lineNum="143" parent="globals/CdAView" pc="268437144" symbol="onUpdate"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="17" lineNum="145" parent="globals/CdAView" pc="268437148" symbol="onUpdate"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="17" lineNum="148" parent="globals/CdAView" pc="268437195" symbol="onUpdate"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="17" lineNum="149" parent="globals/CdAView" pc="268437223" symbol="onUpdate"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="17" lineNum="150" parent="globals/CdAView" pc="268437243" symbol="onUpdate"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="17" lineNum="152" parent="globals/CdAView" pc="268437263" symbol="onUpdate"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="17" lineNum="155" parent="globals/CdAView" pc="268437280" symbol="onUpdate"/>
+<entry filename="/Users/jakobteuffel/CdA/source/CdAView.mc" id="17" lineNum="158" parent="globals/CdAView" pc="268437320" symbol="onUpdate"/>
+<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="18" lineNum="63" parent="globals/Rez/Layouts" pc="268437345" symbol="BottomRightLayout"/>
+<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="18" lineNum="64" parent="globals/Rez/Layouts" pc="268437357" symbol="BottomRightLayout"/>
+<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="18" lineNum="66" parent="globals/Rez/Layouts" pc="268437385" symbol="BottomRightLayout"/>
+<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="18" lineNum="68" parent="globals/Rez/Layouts" pc="268437497" symbol="BottomRightLayout"/>
+<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="18" lineNum="70" parent="globals/Rez/Layouts" pc="268437609" symbol="BottomRightLayout"/>
+<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="19" lineNum="43" parent="globals/Rez/Layouts" pc="268437646" symbol="TopRightLayout"/>
+<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="19" lineNum="44" parent="globals/Rez/Layouts" pc="268437658" symbol="TopRightLayout"/>
+<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="19" lineNum="46" parent="globals/Rez/Layouts" pc="268437686" symbol="TopRightLayout"/>
+<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="19" lineNum="48" parent="globals/Rez/Layouts" pc="268437798" symbol="TopRightLayout"/>
+<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="19" lineNum="50" parent="globals/Rez/Layouts" pc="268437910" symbol="TopRightLayout"/>
+<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="20" lineNum="53" parent="globals/Rez/Layouts" pc="268437947" symbol="BottomLeftLayout"/>
+<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="20" lineNum="54" parent="globals/Rez/Layouts" pc="268437959" symbol="BottomLeftLayout"/>
+<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="20" lineNum="56" parent="globals/Rez/Layouts" pc="268437987" symbol="BottomLeftLayout"/>
+<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="20" lineNum="58" parent="globals/Rez/Layouts" pc="268438099" symbol="BottomLeftLayout"/>
+<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="20" lineNum="60" parent="globals/Rez/Layouts" pc="268438211" symbol="BottomLeftLayout"/>
+<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="21" lineNum="33" parent="globals/Rez/Layouts" pc="268438248" symbol="TopLeftLayout"/>
+<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="21" lineNum="34" parent="globals/Rez/Layouts" pc="268438260" symbol="TopLeftLayout"/>
+<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="21" lineNum="36" parent="globals/Rez/Layouts" pc="268438288" symbol="TopLeftLayout"/>
+<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="21" lineNum="38" parent="globals/Rez/Layouts" pc="268438400" symbol="TopLeftLayout"/>
+<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="21" lineNum="40" parent="globals/Rez/Layouts" pc="268438512" symbol="TopLeftLayout"/>
+<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="22" lineNum="19" parent="globals/Rez/Layouts" pc="268438549" symbol="MainLayout"/>
+<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="22" lineNum="20" parent="globals/Rez/Layouts" pc="268438561" symbol="MainLayout"/>
+<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="22" lineNum="22" parent="globals/Rez/Layouts" pc="268438574" symbol="MainLayout"/>
+<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="22" lineNum="24" parent="globals/Rez/Layouts" pc="268438587" symbol="MainLayout"/>
+<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="22" lineNum="26" parent="globals/Rez/Layouts" pc="268438615" symbol="MainLayout"/>
+<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="22" lineNum="28" parent="globals/Rez/Layouts" pc="268438750" symbol="MainLayout"/>
+<entry filename="/Users/jakobteuffel/CdA/bin/gen/006-B2909-00/source/Rez.mcgen" id="22" lineNum="30" parent="globals/Rez/Layouts" pc="268438885" symbol="MainLayout"/>
 </pcToLineNum>
 <symbolTable>
 <entry id="8388639" module="true" symbol="Graphics"/>
+<entry field="true" id="19" symbol="vam"/>
 <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
 <entry id="7" module="true" symbol="globals/Rez/Menus"/>
+<entry id="8389849" symbol="units"/>
 <entry id="9" object="true" symbol="CdAApp"/>
-<entry id="19" method="true" symbol="MainLayout"/>
-<entry field="true" id="14" symbol="mValue"/>
+<entry id="23" method="true" symbol="MainLayout"/>
 <entry id="8388647" module="true" symbol="UserProfile"/>
 <entry field="true" id="8388611" module="true" symbol="Toybox"/>
-<entry field="true" id="22" symbol="AppName"/>
+<entry field="true" id="26" symbol="AppName"/>
 <entry id="8" module="true" symbol="globals/Rez/Strings"/>
 <entry id="8388772" module="true" object="true" symbol="Fonts"/>
 <entry id="8388631" module="true" symbol="Activity"/>
-<entry id="13" method="true" symbol="get_vam"/>
+<entry id="16" method="true" symbol="get_vam"/>
 <entry id="8388648" module="true" symbol="WatchUi"/>
 <entry field="true" id="8389138" symbol="label"/>
 <entry id="2" module="true" symbol="globals/Rez"/>
+<entry field="true" id="15" symbol="fIT_Field"/>
 <entry id="8389410" module="true" symbol="AntPlus"/>
 <entry id="8389124" method="true" symbol="onUpdate"/>
 <entry field="true" id="8389065" symbol="locY"/>
@@ -146,18 +162,22 @@
 <entry id="8389137" method="true" symbol="compute"/>
 <entry id="8389802" method="true" symbol="getElevationHistory"/>
 <entry id="8389131" method="true" symbol="setColor"/>
+<entry field="true" id="14" symbol="c_dA"/>
 <entry id="5" module="true" symbol="globals/Rez/JsonData"/>
+<entry field="true" id="13" symbol="altitude_last"/>
 <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
-<entry id="20" method="true" symbol="TopLeftLayout"/>
-<entry field="true" id="15" symbol="mass"/>
+<entry id="24" method="true" symbol="TopLeftLayout"/>
+<entry field="true" id="17" symbol="mass"/>
+<entry id="8388645" module="true" symbol="Time"/>
 <entry id="8388769" module="true" object="true" symbol="Rez"/>
-<entry id="17" method="true" symbol="BottomLeftLayout"/>
-<entry id="18" method="true" symbol="BottomRightLayout"/>
+<entry id="21" method="true" symbol="BottomLeftLayout"/>
+<entry field="true" id="18" symbol="time_last"/>
+<entry id="22" method="true" symbol="BottomRightLayout"/>
 <entry id="8388640" module="true" symbol="Lang"/>
 <entry id="8390088" module="true" object="true" symbol="JsonData"/>
 <entry field="true" id="8389130" symbol="mColor"/>
 <entry id="8389068" method="true" symbol="draw"/>
-<entry field="true" id="16" symbol="LauncherIcon"/>
+<entry field="true" id="20" symbol="LauncherIcon"/>
 <entry id="8388610" symbol="statics"/>
 <entry id="8388643" module="true" symbol="Sensor"/>
 <entry id="8389350" module="true" symbol="globals"/>
@@ -166,67 +186,74 @@
 <entry id="8388702" method="true" symbol="initialize"/>
 <entry id="10" object="true" symbol="CdAView"/>
 <entry id="8389279" method="true" symbol="onStart"/>
+<entry id="8389780" module="true" symbol="FitContributor"/>
 <entry id="8389808" symbol="period"/>
 <entry id="8388641" module="true" symbol="Math"/>
 <entry id="8389280" method="true" symbol="getInitialView"/>
 <entry id="8389281" method="true" symbol="onStop"/>
+<entry id="8389847" symbol="mesgType"/>
 <entry id="8389347" symbol="color"/>
 <entry id="8389781" module="true" symbol="SensorHistory"/>
 <entry id="11" module="true" symbol="Layouts"/>
 <entry id="4" module="true" symbol="globals/Rez/Fonts"/>
 <entry id="8388635" module="true" symbol="Application"/>
-<entry id="21" method="true" symbol="TopRightLayout"/>
+<entry id="25" method="true" symbol="TopRightLayout"/>
 </symbolTable>
 <localVars>
 <entry arg="true" endPc="268435517" name="color" stackId="1" startPc="268435505"/>
 <entry endPc="268435575" name="dictionary" stackId="1" startPc="268435522"/>
 <entry arg="true" endPc="268435616" name="dc" stackId="1" startPc="268435577"/>
-<entry arg="true" endPc="268436098" name="info" stackId="1" startPc="268435744"/>
-<entry endPc="268436097" name="power" stackId="2" startPc="268435748"/>
-<entry endPc="268436097" name="speed" stackId="3" startPc="268435748"/>
-<entry endPc="268436097" name="heading" stackId="4" startPc="268435748"/>
-<entry endPc="268436097" name="pressure" stackId="5" startPc="268435748"/>
-<entry endPc="268436097" name="abs_temp" stackId="6" startPc="268435748"/>
-<entry endPc="268436097" name="airSpeed" stackId="7" startPc="268435748"/>
-<entry endPc="268435915" name="wthCon" stackId="8" startPc="268435831"/>
-<entry endPc="268436097" name="airDensity" stackId="9" startPc="268435748"/>
-<entry endPc="268436097" name="vam" stackId="10" startPc="268435748"/>
-<entry endPc="268436097" name="rollLoss" stackId="11" startPc="268435748"/>
-<entry endPc="268436097" name="kinLoss" stackId="12" startPc="268435748"/>
-<entry endPc="268436097" name="Ps" stackId="13" startPc="268435748"/>
-<entry endPc="268436097" name="v3Rho" stackId="14" startPc="268435748"/>
-<entry endPc="268436260" name="altIt" stackId="1" startPc="268436151"/>
-<entry endPc="268436260" name="start" stackId="2" startPc="268436151"/>
-<entry endPc="268436260" name="end" stackId="3" startPc="268436151"/>
-<entry arg="true" endPc="268436748" name="dc" stackId="1" startPc="268436273"/>
-<entry endPc="268436747" name="obscurityFlags" stackId="2" startPc="268436277"/>
-<entry endPc="268436706" name="labelView" stackId="3" startPc="268436556"/>
-<entry endPc="268436706" name="valueView" stackId="4" startPc="268436556"/>
-<entry endPc="268436822" name="profile" stackId="1" startPc="268436753"/>
-<entry arg="true" endPc="268437024" name="dc" stackId="1" startPc="268436824"/>
-<entry endPc="268437023" name="value" stackId="2" startPc="268436828"/>
-<entry arg="true" endPc="268437325" name="dc" stackId="1" startPc="268437025"/>
-<entry endPc="268437325" name="rez_cmp_local_custom_drawable_63320710813638248251" stackId="2" startPc="268437037"/>
-<entry endPc="268437325" name="rez_cmp_local_text_label" stackId="3" startPc="268437037"/>
-<entry endPc="268437325" name="rez_cmp_local_text_value" stackId="4" startPc="268437037"/>
-<entry arg="true" endPc="268437626" name="dc" stackId="1" startPc="268437326"/>
-<entry endPc="268437626" name="rez_cmp_local_custom_drawable_11432098345381208831" stackId="2" startPc="268437338"/>
-<entry endPc="268437626" name="rez_cmp_local_text_label" stackId="3" startPc="268437338"/>
-<entry endPc="268437626" name="rez_cmp_local_text_value" stackId="4" startPc="268437338"/>
-<entry arg="true" endPc="268437927" name="dc" stackId="1" startPc="268437627"/>
-<entry endPc="268437927" name="rez_cmp_local_custom_drawable_35811958214383890991" stackId="2" startPc="268437639"/>
-<entry endPc="268437927" name="rez_cmp_local_text_label" stackId="3" startPc="268437639"/>
-<entry endPc="268437927" name="rez_cmp_local_text_value" stackId="4" startPc="268437639"/>
-<entry arg="true" endPc="268438228" name="dc" stackId="1" startPc="268437928"/>
-<entry endPc="268438228" name="rez_cmp_local_custom_drawable_21144480211447028063" stackId="2" startPc="268437940"/>
-<entry endPc="268438228" name="rez_cmp_local_text_label" stackId="3" startPc="268437940"/>
-<entry endPc="268438228" name="rez_cmp_local_text_value" stackId="4" startPc="268437940"/>
-<entry arg="true" endPc="268438601" name="dc" stackId="1" startPc="268438229"/>
-<entry endPc="268438601" name="rez_cmp_local_var_dc_getHeight" stackId="2" startPc="268438241"/>
-<entry endPc="268438601" name="rez_cmp_local_var_dc_getWidth" stackId="3" startPc="268438241"/>
-<entry endPc="268438601" name="rez_cmp_local_custom_drawable_31214662820007952182" stackId="4" startPc="268438241"/>
-<entry endPc="268438601" name="rez_cmp_local_text_label" stackId="5" startPc="268438241"/>
-<entry endPc="268438601" name="rez_cmp_local_text_value" stackId="6" startPc="268438241"/>
+<entry arg="true" endPc="268436219" name="dc" stackId="1" startPc="268435744"/>
+<entry endPc="268436218" name="obscurityFlags" stackId="2" startPc="268435748"/>
+<entry endPc="268436177" name="labelView" stackId="3" startPc="268436027"/>
+<entry endPc="268436177" name="valueView" stackId="4" startPc="268436027"/>
+<entry arg="true" endPc="268436623" name="info" stackId="1" startPc="268436220"/>
+<entry endPc="268436622" name="power" stackId="2" startPc="268436224"/>
+<entry endPc="268436622" name="speed" stackId="3" startPc="268436224"/>
+<entry endPc="268436622" name="heading" stackId="4" startPc="268436224"/>
+<entry endPc="268436622" name="pressure" stackId="5" startPc="268436224"/>
+<entry endPc="268436622" name="abs_temp" stackId="6" startPc="268436224"/>
+<entry endPc="268436622" name="airSpeed" stackId="7" startPc="268436224"/>
+<entry endPc="268436391" name="wthCon" stackId="8" startPc="268436307"/>
+<entry endPc="268436622" name="airDensity" stackId="9" startPc="268436224"/>
+<entry endPc="268436622" name="vam" stackId="10" startPc="268436224"/>
+<entry endPc="268436622" name="rollLoss" stackId="11" startPc="268436224"/>
+<entry endPc="268436622" name="kinLoss" stackId="12" startPc="268436224"/>
+<entry endPc="268436622" name="Ps" stackId="13" startPc="268436224"/>
+<entry endPc="268436622" name="v3Rho" stackId="14" startPc="268436224"/>
+<entry arg="true" endPc="268436933" name="alt" stackId="1" startPc="268436624"/>
+<entry arg="true" endPc="268436933" name="time" stackId="2" startPc="268436624"/>
+<entry endPc="268436788" name="altIt" stackId="3" startPc="268436679"/>
+<entry endPc="268436788" name="start" stackId="4" startPc="268436679"/>
+<entry endPc="268436788" name="end" stackId="5" startPc="268436679"/>
+<entry endPc="268436924" name="alt_gain" stackId="6" startPc="268436809"/>
+<entry endPc="268436924" name="duration" stackId="7" startPc="268436809"/>
+<entry endPc="268437142" name="profile" stackId="1" startPc="268436938"/>
+<entry endPc="268437142" name="info" stackId="2" startPc="268436938"/>
+<entry arg="true" endPc="268437344" name="dc" stackId="1" startPc="268437144"/>
+<entry endPc="268437343" name="value" stackId="2" startPc="268437148"/>
+<entry arg="true" endPc="268437645" name="dc" stackId="1" startPc="268437345"/>
+<entry endPc="268437645" name="rez_cmp_local_custom_drawable_73076466515919977551" stackId="2" startPc="268437357"/>
+<entry endPc="268437645" name="rez_cmp_local_text_label" stackId="3" startPc="268437357"/>
+<entry endPc="268437645" name="rez_cmp_local_text_value" stackId="4" startPc="268437357"/>
+<entry arg="true" endPc="268437946" name="dc" stackId="1" startPc="268437646"/>
+<entry endPc="268437946" name="rez_cmp_local_custom_drawable_17872722010426159319" stackId="2" startPc="268437658"/>
+<entry endPc="268437946" name="rez_cmp_local_text_label" stackId="3" startPc="268437658"/>
+<entry endPc="268437946" name="rez_cmp_local_text_value" stackId="4" startPc="268437658"/>
+<entry arg="true" endPc="268438247" name="dc" stackId="1" startPc="268437947"/>
+<entry endPc="268438247" name="rez_cmp_local_custom_drawable_79713818637463465752" stackId="2" startPc="268437959"/>
+<entry endPc="268438247" name="rez_cmp_local_text_label" stackId="3" startPc="268437959"/>
+<entry endPc="268438247" name="rez_cmp_local_text_value" stackId="4" startPc="268437959"/>
+<entry arg="true" endPc="268438548" name="dc" stackId="1" startPc="268438248"/>
+<entry endPc="268438548" name="rez_cmp_local_custom_drawable_20393149169719520381" stackId="2" startPc="268438260"/>
+<entry endPc="268438548" name="rez_cmp_local_text_label" stackId="3" startPc="268438260"/>
+<entry endPc="268438548" name="rez_cmp_local_text_value" stackId="4" startPc="268438260"/>
+<entry arg="true" endPc="268438921" name="dc" stackId="1" startPc="268438549"/>
+<entry endPc="268438921" name="rez_cmp_local_var_dc_getHeight" stackId="2" startPc="268438561"/>
+<entry endPc="268438921" name="rez_cmp_local_var_dc_getWidth" stackId="3" startPc="268438561"/>
+<entry endPc="268438921" name="rez_cmp_local_custom_drawable_85144666411561467671" stackId="4" startPc="268438561"/>
+<entry endPc="268438921" name="rez_cmp_local_text_label" stackId="5" startPc="268438561"/>
+<entry endPc="268438921" name="rez_cmp_local_text_value" stackId="6" startPc="268438561"/>
 </localVars>
 <annotations>
 <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
@@ -239,12 +266,12 @@
 <dataEntry label="globals/CdAApp" offset="237" parentId="globals" symbolId="CdAApp" type="class"/>
 <dataEntry label="globals/Rez" offset="308" parentId="globals" symbolId="Rez" type="module"/>
 <dataEntry label="globals/CdAView" offset="387" parentId="globals" symbolId="CdAView" type="class"/>
-<dataEntry label="globals/Rez/Drawables" offset="482" parentId="Rez" symbolId="Drawables" type="module"/>
-<dataEntry label="globals/Rez/Layouts" offset="521" parentId="Rez" symbolId="Layouts" type="module"/>
-<dataEntry label="globals/Rez/Menus" offset="592" parentId="Rez" symbolId="Menus" type="module"/>
-<dataEntry label="globals/Rez/Fonts" offset="623" parentId="Rez" symbolId="Fonts" type="module"/>
-<dataEntry label="globals/Rez/Strings" offset="654" parentId="Rez" symbolId="Strings" type="module"/>
-<dataEntry label="globals/Rez/JsonData" offset="701" parentId="Rez" symbolId="JsonData" type="module"/>
+<dataEntry label="globals/Rez/Drawables" offset="514" parentId="Rez" symbolId="Drawables" type="module"/>
+<dataEntry label="globals/Rez/Layouts" offset="553" parentId="Rez" symbolId="Layouts" type="module"/>
+<dataEntry label="globals/Rez/Menus" offset="624" parentId="Rez" symbolId="Menus" type="module"/>
+<dataEntry label="globals/Rez/Fonts" offset="655" parentId="Rez" symbolId="Fonts" type="module"/>
+<dataEntry label="globals/Rez/Strings" offset="686" parentId="Rez" symbolId="Strings" type="module"/>
+<dataEntry label="globals/Rez/JsonData" offset="733" parentId="Rez" symbolId="JsonData" type="module"/>
 </dataEntryOffsetMappings>
 <functions>
 <functionEntry accessMode="public" endPc="268435485" name="getApp" startPc="268435460">
@@ -287,21 +314,23 @@
 <functionEntry accessMode="public" endPc="268435743" name="&lt;init&gt;" parent="CdAView" startPc="268435725">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268436098" name="compute" parent="CdAView" startPc="268435744">
-<param id="info"/>
-<documentation/>
-</functionEntry>
-<functionEntry accessMode="public" endPc="268436272" name="get_vam" parent="CdAView" startPc="268436099">
-<documentation/>
-</functionEntry>
-<functionEntry accessMode="public" endPc="268436748" name="onLayout" parent="CdAView" startPc="268436273">
+<functionEntry accessMode="public" endPc="268436219" name="onLayout" parent="CdAView" startPc="268435744">
 <param id="dc"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268436823" name="initialize" parent="CdAView" startPc="268436749">
+<functionEntry accessMode="public" endPc="268436623" name="compute" parent="CdAView" startPc="268436220">
+<param id="info"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268437024" name="onUpdate" parent="CdAView" startPc="268436824">
+<functionEntry accessMode="public" endPc="268436933" name="get_vam" parent="CdAView" startPc="268436624">
+<param id="alt"/>
+<param id="time"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437143" name="initialize" parent="CdAView" startPc="268436934">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437344" name="onUpdate" parent="CdAView" startPc="268437144">
 <param id="dc"/>
 <documentation/>
 </functionEntry>
@@ -323,23 +352,23 @@
 <functionEntry accessMode="public" name="&lt;init&gt;" parent="JsonData">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268437325" name="BottomRightLayout" parent="Layouts" startPc="268437025">
+<functionEntry accessMode="public" endPc="268437645" name="BottomRightLayout" parent="Layouts" startPc="268437345">
 <param id="dc"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268437626" name="TopRightLayout" parent="Layouts" startPc="268437326">
+<functionEntry accessMode="public" endPc="268437946" name="TopRightLayout" parent="Layouts" startPc="268437646">
 <param id="dc"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268437927" name="BottomLeftLayout" parent="Layouts" startPc="268437627">
+<functionEntry accessMode="public" endPc="268438247" name="BottomLeftLayout" parent="Layouts" startPc="268437947">
 <param id="dc"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268438228" name="TopLeftLayout" parent="Layouts" startPc="268437928">
+<functionEntry accessMode="public" endPc="268438548" name="TopLeftLayout" parent="Layouts" startPc="268438248">
 <param id="dc"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268438601" name="MainLayout" parent="Layouts" startPc="268438229">
+<functionEntry accessMode="public" endPc="268438921" name="MainLayout" parent="Layouts" startPc="268438549">
 <param id="dc"/>
 <documentation/>
 </functionEntry>

@@ -8,23 +8,39 @@ import Toybox.Sensor;
 import Toybox.Math;
 import Toybox.Weather;
 import Toybox.SensorHistory;
+import Toybox.Time;
+import Toybox.FitContributor;
 
 class CdAView extends WatchUi.DataField {
 
-    hidden var mValue as Numeric;
-    hidden var mass as Number; // [Kg]
+    hidden var c_dA as Numeric;
+    hidden var mass as Numeric; // [Kg]
+    hidden var altitude_last as Numeric;
+    hidden var time_last as Time.Moment;
+    hidden var fIT_Field as FitContributor.Field;
+    hidden var vam as Numeric;
     hidden const R_spec = 287.0500676 as Numeric; // [J /Kg /K]
     hidden const K_zero = 273.15; // 0°C in [K]
     hidden const driveTrainEffitiency = 0.97; // [1]
     hidden const roll_fric = 0.006 as Numeric; // [Ns/m]
+    hidden const BANANAS_FIELD_ID = 666 as Lang.Number;
     
 
     function initialize() {
         DataField.initialize();
-        mValue = 0.0f;
+        c_dA = 0.0f;
         var profile = UserProfile.getProfile() as Profile;
-        mass = profile.weight / 1e3 as Number; // [Kg]
-        //DataField.createField("CdA", 666, Fit, options)
+        mass = profile.weight / 1e3 as Numeric or Null; // [Kg]
+        var info = Activity.getActivityInfo();
+        altitude_last = info.altitude;
+        time_last = Time.now();
+        vam = 0;
+        fIT_Field = createField(
+            "CdA",
+            BANANAS_FIELD_ID,
+            FitContributor.DATA_TYPE_FLOAT,
+            {:mesgType=>FitContributor.MESG_TYPE_RECORD, :units=>"m^2"}
+        );
     }
 
     // Set your layout here. Anytime the size of obscurity of
@@ -72,9 +88,9 @@ class CdAView extends WatchUi.DataField {
             } else {
                 power = 0;
             }
-            var speed = info.currentSpeed as Number; // [m/s]
-            var heading = info.currentHeading as Number; // [DEG]
-            var pressure = info.ambientPressure as Number; // [N/m^2]
+            var speed = info.currentSpeed as Number or Null; // [m/s]
+            var heading = info.currentHeading as Number or Null; // [DEG]
+            var pressure = info.ambientPressure as Number or Null; // [N/m^2]
             var abs_temp = 300.0;
             var airSpeed = speed;
             if (Toybox has :Weather){
@@ -86,28 +102,38 @@ class CdAView extends WatchUi.DataField {
             if (pressure != null && abs_temp != null){
                 airDensity = pressure / (R_spec * abs_temp);// Ideal Gas Law [kg/m^3]
             }
-            var vam = get_vam();
-            var rollLoss = roll_fric * Math.pow(speed,2);
+            var vam = get_vam(info.altitude, Time.now());
+            var rollLoss = roll_fric * Math.pow(speed, 2);
             var kinLoss = mass * 9.81 * vam;
             var Ps = (power - rollLoss - kinLoss);
             var v3Rho = Math.pow(airSpeed,3) * airDensity;
             if(v3Rho > 0){
-                mValue = Ps / v3Rho;
+                c_dA = Ps / v3Rho;
             }else {
-                mValue = 0;
+                c_dA = 0;
             }
+            fIT_Field.setData(c_dA);
          
     }
 
-    function get_vam() as Numeric{
-        if (Toybox has :SensorHistory) {
-            if (Toybox.SensorHistory has :getElevationHistory){
-                var altIt = SensorHistory.getElevationHistory({:period=> 2 as Lang.Number});
-                var start = altIt.next().data;
-                var end = altIt.next().data;
-                return (end[1] - start[1])/(end[0] - start[0]);
+    function get_vam(alt as Numeric or Null, time as Time.Moment or Null) as Numeric{
+        if ((Toybox has :SensorHistory) and (Toybox.SensorHistory has :getElevationHistory)) {
+            var altIt = SensorHistory.getElevationHistory({:period=> 2 as Lang.Number});
+            var start = altIt.next().data;
+            var end = altIt.next().data;
+            return (end[1] - start[1])/(end[0] - start[0]);
+        } else if ((alt != null) and (time != null)){
+            var alt_gain = (alt - altitude_last);
+            var duration = (time_last.subtract(time) as Time.Duration).value();
+            if (duration > 0){
+                vam = alt_gain/duration;
             }
-        }
+            if (alt != altitude_last){
+                time_last = time;
+                altitude_last = alt;
+            }
+            return vam;
+        }   
         return 0;
     }
 
@@ -126,10 +152,9 @@ class CdAView extends WatchUi.DataField {
             value.setColor(Graphics.COLOR_BLACK);
         }
         //value.setTitle("CdA");
-        value.setText("CdA\n"+mValue.format("%+.4f"));
+        value.setText("CdA\n"+c_dA.format("%.4f"));
 
         // Call parent's onUpdate(dc) to redraw the layout
         View.onUpdate(dc);
     }
-
 }
