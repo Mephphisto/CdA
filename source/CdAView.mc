@@ -14,6 +14,7 @@ class CdAView extends WatchUi.DataField {
     hidden var mValue as Numeric;
     hidden var mass as Number; // [Kg]
     hidden const R_spec = 287.0500676 as Numeric; // [J /Kg /K]
+    hidden const K_zero = 273.15; // 0°C in [K]
     hidden const driveTrainEffitiency = 0.97; // [1]
     hidden const roll_fric = 0.006 as Numeric; // [Ns/m]
     
@@ -85,9 +86,9 @@ class CdAView extends WatchUi.DataField {
             if (pressure != null && abs_temp != null){
                 airDensity = pressure / (R_spec * abs_temp);// Ideal Gas Law [kg/m^3]
             }
-            var grad = gradient(3);
+            var vam = get_vam();
             var rollLoss = roll_fric * Math.pow(speed,2);
-            var kinLoss = mass * 9.81 * grad * speed;
+            var kinLoss = mass * 9.81 * vam;
             var Ps = (power - rollLoss - kinLoss);
             var v3Rho = Math.pow(airSpeed,3) * airDensity;
             if(v3Rho > 0){
@@ -98,15 +99,16 @@ class CdAView extends WatchUi.DataField {
          
     }
 
-    function gradient(L as Number) as Numeric{
-        //var altIt = SensorHistory.getElevationHistory(L, SensorHistory.ORDER_OLDEST_FIRST);
-        var grad = 0;
-        //var dat_last = altIt.next().data;
-        //for (var k = 0; k < 10; k++){
-        //    var dta = altIt.next().data;
-            //alts
-        //}
-        return grad;
+    function get_vam() as Numeric{
+        if (Toybox has :SensorHistory) {
+            if (Toybox.SensorHistory has :getElevationHistory){
+                var altIt = SensorHistory.getElevationHistory({:period=> 2 as Lang.Number});
+                var start = altIt.next().data;
+                var end = altIt.next().data;
+                return (end[1] - start[1])/(end[0] - start[0]);
+            }
+        }
+        return 0;
     }
 
 
