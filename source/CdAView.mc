@@ -106,7 +106,7 @@ class CdAView extends WatchUi.DataField {
             var rollLoss = roll_fric * Math.pow(speed, 2);
             var kinLoss = mass * 9.81 * vam;
             var Ps = (power - rollLoss - kinLoss);
-            var v3Rho = Math.pow(airSpeed,3) * airDensity;
+            var v3Rho = Math.pow(airSpeed, 3) * airDensity;
             if(v3Rho > 0){
                 c_dA = Ps / v3Rho;
             }else {
@@ -119,10 +119,14 @@ class CdAView extends WatchUi.DataField {
     function get_vam(alt as Numeric or Null, time as Time.Moment or Null) as Numeric{
         if ((Toybox has :SensorHistory) and (Toybox.SensorHistory has :getElevationHistory)) {
             var altIt = SensorHistory.getElevationHistory({:period=> 2 as Lang.Number});
-            var start = altIt.next().data;
-            var end = altIt.next().data;
-            return (end[1] - start[1])/(end[0] - start[0]);
-        } else if ((alt != null) and (time != null)){
+            var new_alt = altIt.next() as SensorHistory.SensorSample;
+            var old_alt = altIt.next() as SensorHistory.SensorSample;
+            alt = new_alt.data;
+            time = new_alt.when;
+            altitude_last = old_alt.data;
+            time_last = old_alt.when;
+        } 
+        if ((alt != null) and (time != null)){
             var alt_gain = (alt - altitude_last);
             var duration = (time_last.subtract(time) as Time.Duration).value();
             if (duration > 0){
@@ -146,13 +150,17 @@ class CdAView extends WatchUi.DataField {
 
         // Set the foreground color and value
         var value = View.findDrawableById("value") as Text;
+        var title = View.findDrawableById("label") as Text;
         if (getBackgroundColor() == Graphics.COLOR_BLACK) {
             value.setColor(Graphics.COLOR_WHITE);
+            title.setColor(Graphics.COLOR_WHITE);
         } else {
             value.setColor(Graphics.COLOR_BLACK);
+            title.setColor(Graphics.COLOR_BLACK);
         }
         //value.setTitle("CdA");
-        value.setText("CdA\n"+c_dA.format("%.4f"));
+        title.setText("CdA\n");
+        value.setText(c_dA.format("%.4f"));
 
         // Call parent's onUpdate(dc) to redraw the layout
         View.onUpdate(dc);

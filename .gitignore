@@ -1,0 +1,9 @@
+CdA.code-workspace
+bin/
+.vscode
+build/
+*.prg
+WARNING
+mir/
+internal-mir/
+gen/
